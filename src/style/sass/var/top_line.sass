@@ -1,0 +1,109 @@
+.top-line
+	+flex
+	padding: 23px 30px
+	+justify-content(space-between)
+	+align-items(center)
+
+	&_logo
+		display: inline-block
+		width: 100%
+		max-width: 130px
+		+prefix(transition, $default-transition)
+
+		&:hover
+			opacity: $default-opacity
+
+		&-img
+			width: 100%
+	
+	&_elem.search
+		width: 100%
+		max-width: 292px
+
+	&_search
+		position: relative
+
+		&-input
+			padding: 15px 20px
+				right: 36px
+			width: 100%
+			font-size: 14px
+			line-height: 14px
+			border: $border-param
+			border-radius: 5px
+
+		&-icon
+			position: absolute
+			top: 15px
+			right: 17px
+			width: 16px
+			height: 16px
+
+	&_nav
+		&-list
+			+flex
+			list-style-type: none
+		
+		&-link
+			margin:
+				right: 20px
+			color: $font-dark-color
+			+prefix(transition, $default-transition)
+
+			&:hover
+				color: $accent-color 
+
+			&::last-child
+				margin:
+					right: 0
+	
+	&_button
+		display: inline-block
+		position: relative
+		color: $font-dark-color
+		+prefix(transition, $default-transition)
+
+		&-img
+			width: 19px
+			height: 19px
+
+			path
+				+prefix(transition, $default-transition)
+
+		&-text
+			display: inline-block
+			margin:
+				top: 3px
+				left: 10px
+			font-size: 16px
+			vertical-align: top
+
+		&:hover
+			color: $accent-color
+
+			.top-line_button-img
+				path 
+					stroke: $accent-color
+
+	&_favorites
+		margin-right: 26px
+		&-value
+			display: block
+			position: absolute
+			top: -7px 
+			right: -10px
+			width: 20px
+			height: 20px
+			font-size: 9px
+			line-height: 18px
+			color: $white-color
+			background-color: $accent-color
+			border: 2px solid $white-color
+			text-align: center 
+			border-radius: 10em
+	
+	&_favorites.favorites-none
+		.top-line_favorites-value
+			background-color: #808080
+
+	&_account
