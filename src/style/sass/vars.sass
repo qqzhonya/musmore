@@ -55,9 +55,471 @@ select
 a
 	text-decoration: none
 
-.main
+.main-wrapper
 	margin: 0 auto
 		top: 165px
 	width: 100%
 	max-width: 1200px
 	background-color: $white-color
+
+.wrapper
+	padding: 0 30px
+		top: 30px
+		bottom: 100px
+
+	&-box
+		+flex
+
+	&-content
+		padding:
+			right: 30px
+
+	&-sidebar
+		padding:
+			left: 30px
+		width: 100%
+		max-width: 290px
+		border-left: $border-param
+
+	&-elem
+		margin:
+			bottom: 55px
+
+	&-heading
+		+flex
+		margin:
+			bottom: 25px
+		+justify-content(space-between)
+
+		&-title
+			font-size: 22px
+			font-weight: 700
+		
+		&-link
+			+flex 
+			position: relative
+			font-size: 16px
+			color: $font-dark-color
+			+align-items(center)
+			+prefix(transition, $default-transition)
+
+			&:hover
+				color: $accent-color
+				.wrapper-heading-icon
+					margin:
+						left: 13px
+					
+					path
+						stroke: $accent-color
+
+		&-icon
+			display: inline-block
+			position: relative
+			margin:
+				left: 10px
+			+prefix(transition, all $default-transition)
+			
+			path
+				+prefix(transition, $default-transition)
+
+	&-tab
+
+		&-elem
+			display: inline-block
+			position: relative
+			margin:
+				right: -1px
+			padding: 10px
+			color: $font-dark-color
+			border: 1px solid #c4c4c4
+			text-transform: lowercase
+			z-index: 0
+			+prefix(transition, $default-transition)
+
+			&:first-child
+				border-top-left-radius: 50px
+				border-bottom-left-radius: 50px
+			
+			&:last-child
+				border-top-right-radius: 50px
+				border-bottom-right-radius: 50px
+			
+			&:hover
+				border-color: #808080
+				z-index: 1
+			
+		&-elem.active
+			color: $accent-color
+			border-color: $accent-color	
+			z-index: 2
+
+.track
+	+flex
+	position: relative
+	margin:
+		bottom: 15px
+	max-width: 100%
+	+align-items(center)
+	
+	&:last-child
+		margin:
+			bottom: 0
+
+	&::before
+		content: ''
+		display: block
+		position: absolute
+		top: -8px
+		left: -10px
+		right: -10px
+		bottom: -8px
+		border: 1.5px solid transparent
+		border-radius: 5px
+		+prefix(transition, $default-transition)
+		z-index: 0
+
+	&:hover
+		&::before
+			border-color: $accent-color
+		
+		.track-play
+			opacity: 1
+			visibility: visible	
+		
+		.track-share,
+		.track-download
+			display: block
+		
+		.track-like
+			+flex
+
+		.track-duration-value
+			display: none
+	
+	&-img-box
+		position: relative
+		width: 100%
+		max-width: 45px
+		height: 45px
+		border-radius: 5px
+		overflow: hidden
+						
+	&-img
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: auto
+		max-width: 100%
+		height: auto
+		max-height: 100%
+
+	&-play
+		+flex
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(0, 0, 0, 0.5)
+		opacity: 0
+		visibility: hidden
+		+prefix(transition, $default-transition)
+
+		&-btn
+			margin: auto
+			width: 26px
+			height: 26px
+			background-color: $accent-color
+			background-image: url(../img/icon/play-btn.svg)
+			background-position: center center
+			background-size: 10px 12px
+			background-repeat: no-repeat
+			border-radius: 100%	
+
+	&-info
+		margin:
+			top: 0
+			left: 13px
+		z-index: 1
+			
+	&-control
+		+flex
+		margin: 0 0 0 auto
+		+align-items(center)
+		z-index: 1
+		
+		&-item
+			margin:
+				right: 25px
+			cursor: pointer
+			
+			&:last-child 
+				margin:
+					right: 0
+			
+			path
+				+prefix(transition, $default-transition)
+
+			&:hover
+				path 
+					stroke: $font-dark-color
+
+	&-like
+		font-size: 14px
+		line-height: 14px
+		color: $font-light-color
+		+align-items(center)
+
+		&-value
+			margin:
+				top: 4px
+				left: 7px
+			
+	&-duration
+		min-width: 44px
+		font-size: 14px
+		color: $font-light-color
+		text-align: center
+		
+	&-download
+		margin: 0 auto
+		width: 16px
+		height: 16px
+
+	&-like,
+	&-share,
+	&-download
+		display: none
+
+.media-wrapper
+	+flex
+	+justify-content(space-between)
+
+.media
+	&-elem 
+		position: relative
+		width: 100%
+		max-width: 158px
+		cursor: pointer
+		
+	&-img-box
+		position: relative
+		width: 100%
+		max-width: 158px
+		height: 158px
+		border-radius: 5px
+		overflow: hidden
+
+		&:hover
+			.media-play
+				opacity: 1
+				visibility: visible
+	
+	&-img
+		display: block
+		position: absolute
+		margin: auto
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		max-width: 100%
+		height: 100%
+		max-height: 100%
+
+	&-play
+		+flex
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: rgba(0, 0, 0, 0.5)
+		opacity: 0
+		visibility: hidden
+		+prefix(transition, $default-transition)
+
+		&-btn
+			margin: auto
+			width: 50px
+			height: 50px
+			background-color: $accent-color
+			background-image: url(../img/icon/play-btn.svg)
+			background-position: center center
+			background-size: 15px 18px
+			background-repeat: no-repeat
+			border-radius: 100%
+			
+	&-info
+		margin:
+			top: 10px
+
+	&-link
+		display: block
+		max-width: 300px
+		white-space: nowrap
+		-o-text-overflow: ellipsis
+		text-overflow: ellipsis
+		+prefix(transition, $default-transition)
+		overflow: hidden
+	
+		&:hover
+			color: $accent-color
+
+	&-name
+		font-size: 15px
+		line-height: 15px
+		color: $font-dark-color
+	
+	&-artist
+		margin:
+			top: 7px
+		font-size: 14px
+		line-height: 14px
+		color: $font-light-color
+
+	&-control
+		+flex
+		+align-items(center)
+		
+		&-item
+			margin:
+				right: 25px
+			
+			&:last-child 
+				margin:
+					right: 0
+
+		&-item
+			path
+				+prefix(transition, $default-transition)
+			&:hover
+				path 
+					stroke: $font-dark-color
+
+	&-like
+		+flex
+		font-size: 14px
+		line-height: 14px
+		color: $font-light-color
+		+align-items(center)
+
+		&-value
+			margin:
+				top: 4px
+				left: 7px
+			
+	&-duration
+		min-width: 44px
+		font-size: 14px
+		color: $font-light-color
+		text-align: center
+		
+	&-download
+		display: none
+		margin: 0 auto
+		width: 16px
+		height: 16px
+
+.media-wrapper.artist
+	.media
+		&-img-box
+			border-radius: 100%
+		
+		&-link
+			text-align: center
+
+.tag
+	+flex
+	+justify-content(flex-start)
+	+flex-wrap(wrap)
+
+	&-elem
+		display: block
+		margin:
+			right: 9px
+			bottom: 9px
+		padding: 8px 10px
+		font-size: 14px
+		line-height: 14px
+		color: $font-dark-color
+		border: 1px solid #c4c4c4
+		border-radius: 5px
+		+prefix(transition, $default-transition)
+
+		&:last-child
+			margin:
+				right: 0
+		
+		&:hover
+			color: $accent-color
+			border-color: $accent-color
+
+.sidebar
+	&-elem
+		margin:
+			bottom: 30px
+
+	&-heading
+		margin:
+			bottom: 20px
+
+	&-track
+		+flex
+		padding: 10px 0
+		border-bottom: $border-param
+		+justify-content(space-between)
+		+align-items(center)
+
+		&:first-child
+			padding-top: 0
+		
+		&:last-child
+			border: 0
+
+		.media-link
+			max-width: 220px
+
+		&-btn
+			+flex
+			width: 30px
+			height: 30px
+			border: 1px solid #151515
+			border-radius: 100%
+			cursor: pointer
+			+prefix(transition, $default-transition)
+
+			&:hover
+				border-color: $accent-color
+
+				.sidebar-track-btn-icon
+					path 
+						fill: $accent-color
+
+			&-icon
+				margin: auto
+
+				path
+					+prefix(transition, $default-transition)
+
+		&-play
+			width: 9px 
+			height: 12px
+		
+		&-pause
+			display: none
+	
+	&-more-btn
+		display: inline-block
+		margin:
+			top: 10px
+		font-size: 15px
+		color: $accent-color
+
+		&:hover
+			text-decoration: underline

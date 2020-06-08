@@ -1,0 +1,27 @@
+.footer
+	+flex
+	padding: 0 30px
+		bottom: 242px
+
+	&-elem
+		margin:
+			right: 20px
+		font-size: 14px
+		line-height: 14px
+		color: #c4c4c4
+		
+		&:last-child
+			margin:
+				right: 0
+	
+	&-nav
+		color: $font-light-color
+	
+	&-link
+		color: #0054B9
+	
+	a
+		+prefix(transition, $default-transition)
+
+	a:hover
+		color: $accent-color

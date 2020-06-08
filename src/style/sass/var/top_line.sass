@@ -1,8 +1,10 @@
 .top-line
 	+flex
-	padding: 23px 30px
+	padding: 21px 30px
+	height: 90px
 	+justify-content(space-between)
 	+align-items(center)
+	border-bottom: $border-param
 
 	&_logo
 		display: inline-block
@@ -45,10 +47,13 @@
 			list-style-type: none
 		
 		&-link
+			display: inline-block
 			margin:
 				right: 20px
+			line-height: 88px
 			color: $font-dark-color
 			+prefix(transition, $default-transition)
+			border-bottom: 2px solid transparent
 
 			&:hover
 				color: $accent-color 
@@ -56,6 +61,9 @@
 			&::last-child
 				margin:
 					right: 0
+		
+		&-link.active
+			border-bottom: 2px solid $accent-color
 	
 	&_button
 		display: inline-block

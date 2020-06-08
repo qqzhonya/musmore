@@ -1,1 +1,63 @@
 .main
+	&-slider
+		position: relative
+
+		.owl-nav
+			
+			button.owl-prev,
+			button.owl-next
+				position: absolute
+				+flex
+				top: 90px
+				width: 38px
+				height: 38px
+				font-size: 0
+				border-radius: 100%
+				background-color: #fff
+				+align-items(center)
+				+justify-content(center)
+				+box-shadow(0px 0px 10px rgba(0, 0, 0, 0.15))
+				+prefix(transition, $default-transition)
+
+				&:hover
+					+prefix(transform, scale(1.1))
+				span 
+					display: block
+					width: 6px
+					height: 15px
+					background-size: cover
+					background-position: center center
+					background-repeat: no-repeat
+
+			button.owl-prev
+				left: -15px
+				
+				span
+					margin:
+						left: -2px
+					background-image: url(../img/icon/slider-arrow-left.svg)
+			
+			button.owl-next
+				right: -15px
+				
+				span
+					margin:
+						right: -2px
+					background-image: url(../img/icon/slider-arrow-right.svg)
+		
+		.media
+			&-elem
+				max-width: 215px
+
+			&-img-box 
+				max-width: 215px
+				height: 215px
+
+.main-page
+	
+	.wrapper
+		
+		&-tracklist
+			margin-top: 30px
+
+	
