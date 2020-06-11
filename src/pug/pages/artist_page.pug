@@ -1,84 +1,48 @@
 .main-wrapper
 	include ../var/top_line.pug
-	
-	.wrapper.main-page
-		.wrapper-elem.main-slider.owl-carousel
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-1.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name What Kinda Music What Kinda Music
-					a(href="").media-link.media-artist Tom Misch, Yussef Dayes
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-2.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name 58
-					a(href="").media-link.media-artist Егор Крид
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-3.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name JOYRiDE
-					a(href="").media-link.media-artist LOONY
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-4.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name Time Only Moves
-					a(href="").media-link.media-artist Imany
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-5.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name В четырёх стенах
-					a(href="").media-link.media-artist Мураками
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-4.jpg", alt="").media-img
-					.media-play
-						.medi-play-btn
-				.media-info
-					a(href="").media-link.media-name Time Only Moves
-					a(href="").media-link.media-artist Imany
-			.media-elem
-				.media-img-box
-					img(src="style/img/album/album-cover-2.jpg", alt="").media-img
-					.media-play
-						.media-play-btn
-				.media-info
-					a(href="").media-link.media-name 58
-					a(href="").media-link.media-artist Егор Крид
 
+	.wrapper.artist-page
+		
 		.wrapper-box
 			.wrapper-content
-				.wrapper-elements 
+				.wrapper-elements
+					.wrapper-elem.header-info.header-info-artist
+						.header-info-img-box
+							img(src="style/img/artist/popularartist-cover-2.jpg", alt="").header-info-img
+						.header-info-wrap
+							.header-info-name Johnyboy 
+							a(href="").header-info-genre Русская поп-музыка
+							.header-info-control
+								a(href="").header-info-play
+									span.header-info-play-btn
+									span.header-info-play-text Слушать
+								.track-control-item.track-like
+									svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+										path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+									span.track-like-value 35 450
+								.track-control-item.track-share
+									svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+										path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+								.track-control-item.track-download
+									svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+										path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+										path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+										path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+								.track-control-item.track-add
+									svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
+										path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
+									svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
+										path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
+
+					.wrapper-elem.artist-tab
+						a(href="").artist-tab-elem.active Главная
+						a(href="").artist-tab-elem Треки
+						a(href="").artist-tab-elem Альбомы
+							
 					.wrapper-elem.wrapper-song
 						.wrapper-heading
-							.wrapper-heading-title Популярная музыка
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
-						
-						.wrapper-tab
-							a(href="#").wrapper-tab-elem за год
-							a(href="#").wrapper-tab-elem.active полгода
-							a(href="#").wrapper-tab-elem месяц
-							a(href="#").wrapper-tab-elem неделю
-							a(href="#").wrapper-tab-elem сегодня
-							a(href="#").wrapper-tab-elem в тренде
-						
+							.wrapper-heading-title Популярные треки
+		
 						.wrapper-tracklist
 							.track
 								.track-img-box
@@ -252,10 +216,6 @@
 					.wrapper-elem.wrapper-album
 						.wrapper-heading
 							.wrapper-heading-title Популярные альбомы
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 						.media-wrapper
 							.media-elem
@@ -298,10 +258,26 @@
 								.media-info
 									a(href="").media-link.media-name Самоизоляция 
 									a(href="").media-link.media-artist Sobol
+							.media-elem
+								.media-img-box
+									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Причины
+									a(href="").media-link.media-artist Ольга Серябкина
+							.media-elem
+								.media-img-box
+									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Апрель
+									a(href="").media-link.media-artist Митя Фомин
 
 					.wrapper-elem.wrapper-artist
 						.wrapper-heading 
-							.wrapper-heading-title Популярные исполнители
+							.wrapper-heading-title Похожие исполнители
 							a(href="").wrapper-heading-link 
 								| Смотреть всё
 								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
@@ -348,91 +324,48 @@
 								.media-info
 									a(href="").media-link.media-name Макс Корж 
 									a(href="").media-link.media-artist русский реп
+							.media-elem
+								.media-img-box
+									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name kavabanga Depo kolibri
+									a(href="").media-link.media-artist русский реп
+							.media-elem
+								.media-img-box
+									img(src="style/img/artist/popularartist-cover-2.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Johnyboy
+									a(href="").media-link.media-artist русский реп
+							.media-elem
+								.media-img-box
+									img(src="style/img/artist/popularartist-cover-3.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Noize MC
+									a(href="").media-link.media-artist русский реп
+							.media-elem
+								.media-img-box
+									img(src="style/img/artist/popularartist-cover-4.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Нервы
+									a(href="").media-link.media-artist украинский реп
+							.media-elem
+								.media-img-box
+									img(src="style/img/artist/popularartist-cover-5.jpg", alt="").media-img
+									.media-play
+										.media-play-btn
+								.media-info
+									a(href="").media-link.media-name Макс Корж 
+									a(href="").media-link.media-artist русский реп
 
-					.wrapper-elem.wrapper-tag
-						.wrapper-heading 
-							.wrapper-heading-title Музыка под настроение
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
-
-						.tag
-							a(href="").tag-elem Агрессивное
-							a(href="").tag-elem Весеннее
-							a(href="").tag-elem Грустное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Мечтательное
-							a(href="").tag-elem Мрачное
-							a(href="").tag-elem Грустное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Мечтательное
-							a(href="").tag-elem Мрачное 
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Мрачное
-							a(href="").tag-elem Грустное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Мечтательное
-							a(href="").tag-elem Мрачное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное
-							a(href="").tag-elem Мечтательное
-							a(href="").tag-elem Дождь за окном
-							a(href="").tag-elem Шуточное 
-							a(href="").tag-elem Мечтательное
-
-					.wrapper-elem.wrapper-compilation
-						.wrapper-heading 
-							.wrapper-heading-title Сборники
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
-
-						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/compilation/compilation-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Басы в машину
-							.media-elem
-								.media-img-box
-									img(src="style/img/compilation/compilation-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Дискотека 80
-							.media-elem
-								.media-img-box
-									img(src="style/img/compilation/compilation-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Кавказские
-							.media-elem
-								.media-img-box
-									img(src="style/img/compilation/compilation-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Басы в машину
-							.media-elem
-								.media-img-box
-									img(src="style/img/compilation/compilation-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Басы в машину
-					
 				include ../var/footer.pug
-
+				
 			include ../var/sidebar.pug
-	
-	
+		

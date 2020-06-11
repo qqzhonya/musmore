@@ -1,5 +1,21 @@
 $(function() {
-	
+	//
+	// Preloader
+	//
+
+	// UNCOMMENT LATER
+	// $(window).on('load', function() {
+	// 	$('.preloader').fadeOut();
+	// 	$('body').css({
+	// 		'overflow': 'auto'
+	// 	});
+	// 	console.log("hi");
+	// });
+
+	//
+	// Preloader end
+	//
+
 	//
 	// Main page slider
 	//
@@ -26,4 +42,84 @@ $(function() {
 	//
 	// Tab active end 
 	//
+
+	//
+	//  Track like 
+	//
+
+	$('.track-like').click(function() {
+		$(this).toggleClass('active');
+	});
+
+	//
+	// Track like end
+	//
+	
+	//
+	// Track add
+	// 
+
+	$('.track-add').click(function() {
+		$(this).toggleClass('active');
+	});
+
+	//
+	// Track add end
+	//
+
+	//
+	// Player HQ, shuffle and repeat btn active
+	//
+
+	$('.p-track-control').click(function() {
+		$(this).toggleClass('active');
+	})
+
+	//
+	// Player HQ, shuffle and repeat btn active end
+	//
+
+	//
+	// Header info play button 
+	//
+
+	$('.header-info-play').click(function() {
+		event.preventDefault();
+		$(this).toggleClass('active');
+	});
+
+
+	//
+	// Song timeline
+	//
+
+	$('.p-progress').slider({
+		orientation: "horizontal",
+		range: "min",
+		max: 100,
+		value: 30,
+		animate: true
+	});
+
+	//
+	// Song timeline end 
+	//
+
+	//
+	// Volume
+	//
+
+	$( ".track-volume-slider" ).slider({
+		value: 60,
+		orientation: "horizontal",
+		range: "min",
+		max: 100,
+		value: 30,
+		animate: true
+	})
+
+	//
+	// Volume end
+	//
+
 });
