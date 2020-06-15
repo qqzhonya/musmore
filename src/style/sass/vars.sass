@@ -111,6 +111,7 @@ a
 		+justify-content(space-between)
 
 		&-title
+			position: relative
 			font-size: 22px
 			font-weight: 700
 		
@@ -140,6 +141,14 @@ a
 			
 			path
 				+prefix(transition, $default-transition)
+
+		&-comment-value
+			position: absolute 
+			right: -25px
+			top: -8px
+			font-size: 14px
+			font-weight: 700
+			color: $font-light-color
 
 	&-tab
 
@@ -185,31 +194,20 @@ a
 .track
 	+flex
 	position: relative
-	margin:
-		bottom: 15px
+	margin: 0 -10px
+	padding: 8px 10px
 	max-width: 100%
 	+align-items(center)
+	border: 1px solid  transparent
+	border-radius: 5px
+	+prefix(transition, $default-transition)
 	
 	&:last-child
 		margin:
 			bottom: 0
 
-	&::before
-		content: ''
-		display: block
-		position: absolute
-		top: -8px
-		left: -10px
-		right: -10px
-		bottom: -8px
-		border: 1.5px solid transparent
-		border-radius: 5px
-		+prefix(transition, $default-transition)
-		z-index: 0
-
 	&:hover
-		&::before
-			border-color: $accent-color
+		border-color: $accent-color
 		
 		.track-play
 			opacity: 1
@@ -273,13 +271,11 @@ a
 		margin:
 			top: 0
 			left: 13px
-		z-index: 1
 			
 	&-control
 		+flex
 		margin: 0 0 0 auto
 		+align-items(center)
-		z-index: 1
 		
 		&-item
 			margin:
@@ -419,15 +415,109 @@ a
 	&-download
 		display: none
 
+	&-share
+		position: relative
+		
+		&-dropdown
+			display: none
+			position: absolute
+			padding: 19px 20px
+			bottom: -80px
+			left: 50%
+			min-width: 355px
+			background-color: $white-color
+			border: $border-param
+			border-radius: 5px
+			+prefix(transform, translateX(-52%))
+			+align-items(center)
+			+justify-content(flex-start)
+			z-index: 20
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: -6px
+				left: 50%
+				width: 12px 
+				height: 12px
+				background-color: $white-color
+				border-top: $border-param
+				border-left: $border-param
+				+prefix(transform, translateX(-50%))
+				+prefix(transform, rotate(45deg))
+
+			&-social
+				display: inline-block
+				margin:
+					right: 5px
+				width: 24px
+				height: 24px
+				border-radius: 100%
+				background-size: auto
+				background-position: center center
+				background-repeat: no-repeat
+			
+			&-social.vk-link
+				background-image: url(../img/icon/vk-icon.svg)
+				background-color: #55769F
+			
+			&-social.tw-link
+				background-image: url(../img/icon/twitter-icon.svg)
+				background-color: #6AABE9
+			
+			&-social.fb-link
+				background-image: url(../img/icon/fb-icon.svg)
+				background-color: #405898
+			
+			&-social.od-link
+				background-image: url(../img/icon/od-icon.svg)
+				background-color: #E37931
+			
+			&-copy
+				position: relative
+				margin:
+					left: 20px
+				padding:
+					left: 32px 
+				font-size: 14px
+				font-weight: 500
+				color: $font-dark-color
+
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					top: 1px
+					left: 0
+					width: 22px 
+					height: 11px
+					background-image: url(../img/icon/link-icon.svg)
+					background-size: cover
+					background-position: center center
+					background-repeat: no-repeat
+
+			&-social:hover,
+			&-copy:hover
+				opacity: $default-opacity
+
+		&-dropdown.active
+			+flex
+
 .media
 	&-wrapper
 		+flex
-		+justify-content(space-between)
+		margin: 0 -7px
+		+flex-wrap(wrap)
+		+justify-content(flex-start)
+		+align-items(flex-start)
 
 	&-elem 
 		position: relative
-		width: 100%
-		max-width: 158px
+		margin-bottom: 20px
+		padding: 0 7px 0 8px
+		width: 20%
+		max-width: 172px
 		cursor: pointer
 		
 	&-img-box
@@ -591,7 +681,7 @@ a
 		font-size: 35px
 		font-weight: 700
 
-	&-list-box
+	&-list
 		+flex
 		margin:
 			top: 20px
@@ -600,12 +690,9 @@ a
 		+justify-content(space-between)
 		+flex-wrap(wrap)
 
-	&-list
-		width: 50%
-		max-width: 216px
-
 		&-elem
-			width: 100%
+			width: 50%
+			max-width: 216px
 			font-size: 14px
 			line-height: 28px
 			font-weight: 500
@@ -619,6 +706,7 @@ a
 		
 		&-link
 			color: $font-dark-color
+			
 
 			&::after
 				content: ','
@@ -651,6 +739,10 @@ a
 				height: 3px
 				background-color: #C4C4C4
 				border-radius: 100%
+
+	&-album-artist
+		width: 100%
+		max-width: 100%
 
 	&-control
 		+flex
@@ -720,4 +812,89 @@ a
 		border: $border-param
 		border-radius: 100%
 
+	&-value-song
+		margin:
+			left: 10px
+		font-size: 14px
+		font-weight: 500
+		color: $font-dark-color
+	
+	&-desc
+		margin:
+			top: 10px
+		width: 100%
+		font-size: 15px
+		font-weight: 500
+		color: $font-light-color
+		line-height: 28px
+	
+.header-info-single
+	display: block
+	margin:
+		bottom: 25px
 
+.show-more
+	+flex
+	margin: 0 auto
+	background-color: transparent
+	border: 0
+	+align-items(center)
+	cursor: pointer
+
+	&-img
+		+prefix(transition, $default-transition)
+
+	&-text
+		margin:
+			top: 2px
+			left: 10px
+		font-size: 15px
+		line-height: 15px
+		font-weight: 500
+		color: $accent-color
+
+	&:hover
+		.show-more-img
+			+prefix(transform, rotate(-45deg))
+
+.pagination
+	+flex
+	margin:
+		top: 30px
+	+justify-content(center)
+	+align-items(center)
+
+	&-elem
+		+flex
+		width: 30px
+		height: 30px
+		font-size: 15px
+		line-height: 15px
+		color: $font-dark-color
+		border: 1px solid transparent
+		border-radius: 5px
+		+justify-content(center)
+		+align-items(center)
+		+prefix(transition, $default-transition)
+
+		&:not(.active):hover
+			color: $accent-color
+
+	&-elem.active
+		color: $accent-color
+		border-color: $accent-color
+	
+	&-nav
+		&-icon
+			path
+				+prefix(transition, $default-transition)
+		
+		&:not(.disabled):hover
+			.pagination-nav-icon
+				path
+					stroke: #000
+	
+	&-nav.disabled 
+		.pagination-nav-icon
+			path
+				stroke: #C4C4C4

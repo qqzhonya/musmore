@@ -122,4 +122,33 @@ $(function() {
 	// Volume end
 	//
 
+	//
+	// Share show
+	//
+
+	$('.track-share').click(function() {
+		$(this).toggleClass('active');
+
+		if($(this).hasClass('active')) {
+			$(this).find('.track-share-dropdown').addClass('active');
+		} else {
+			$(this).find('.track-share-dropdown').removeClass('active');
+		}
+	});
+
+	//
+	// Share show end 
+	//
+
+	//
+	// Add active on add song btn
+	//
+
+	if($('.usersong-page').length) {
+		$('.track').find('.track-add').addClass('active');
+	}
+
+	//
+	// Add active on add song btn end
+	//
 });

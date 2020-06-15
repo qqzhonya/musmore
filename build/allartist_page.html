@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Musmore</title>
+    <meta name="description" content="Musmore">
+    <meta name="keywords" content="test, test1, test2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./style/css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="./style/css/tooltipster-sideTip-shadow.min.css">
+    <link rel="stylesheet" href="./style/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="./style/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./style/css/main.css">
+    <!-- Chrome, Firefox OS and Opera-->
+    <meta name="theme-color" content="#F6CB52">
+    <!-- Windows Phone-->
+    <meta name="msapplication-navbutton-color" content="#F6CB52">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#F6CB52">
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <header class="top-line">
+        <div class="top-line_elem"><a class="top-line_logo" href=""><img class="top-line_logo-img" src="style/img/icon/logo.svg" alt="Logo Musmore"></a></div>
+        <div class="top-line_elem search">
+          <div class="top-line_search">
+            <input class="top-line_search-input" type="text" placeholder="Трек, исполнитель, альбом"><img class="top-line_search-icon" src="style/img/icon/search-icon.svg" alt="">
+          </div>
+        </div>
+        <div class="top-line_elem">
+          <nav class="top-line_nav">
+            <ul class="top-line_nav-list">
+              <li><a class="top-line_nav-link active" href="#">Новые </a></li>
+              <li><a class="top-line_nav-link" href="#">Сборники</a></li>
+              <li><a class="top-line_nav-link" href="#">Жанры </a></li>
+              <li><a class="top-line_nav-link" href="#">Исполнители</a></li>
+              <li><a class="top-line_nav-link" href="#">Популярная</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="top-line_elem top-line_buttons"><a class="top-line_button top-line_favorites favorites-none" href="">
+            <svg class="top-line_button-img" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.5 3L13.6329 9.56434H20.535L14.9511 13.6213L17.084 20.1857L11.5 16.1287L5.91604 20.1857L8.04892 13.6213L2.46496 9.56434H9.36712L11.5 3Z" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10"></path>
+            </svg><span class="top-line_favorites-value">0</span></a><a class="top-line_button top-line_account" href="">
+            <svg class="top-line_button-img" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.5 20C15.7467 20 20 15.7467 20 10.5C20 5.2533 15.7467 1 10.5 1C5.2533 1 1 5.2533 1 10.5C1 15.7467 5.2533 20 10.5 20Z" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path d="M10.5 11.7258C12.1935 11.7258 13.5663 10.353 13.5663 8.65959C13.5663 6.96617 12.1935 5.59338 10.5 5.59338C8.80663 5.59338 7.43384 6.96617 7.43384 8.65959C7.43384 10.353 8.80663 11.7258 10.5 11.7258Z" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path d="M4.24976 17.4752C4.24976 15.5359 5.82217 13.9766 7.74838 13.9766H13.2518C15.1911 13.9766 16.7505 15.549 16.7505 17.4752" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10"></path>
+            </svg><span class="top-line_button-text">Войти</span></a></div>
+      </header>
+      <div class="wrapper usersong-page">
+        <div class="wrapper-box">
+          <div class="wrapper-content">
+            <div class="wrapper-elements">
+              <div class="wrapper-elem header-info header-info-single">
+                <div class="header-info-name">Все исполнители</div>
+              </div>
+              <div class="wrapper-elem wrapper-artist">
+                <div class="media-wrapper artist">
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/album/popularalbum-cover-1.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">kavabanga Depo kolibri</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-2.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Johnyboy</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-3.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Noize MC</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-4.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Нервы</a><a class="media-link media-artist" href="">украинский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-5.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Макс Корж </a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/album/popularalbum-cover-1.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">kavabanga Depo kolibri</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-2.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Johnyboy</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-3.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Noize MC</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-4.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Нервы</a><a class="media-link media-artist" href="">украинский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-5.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Макс Корж </a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/album/popularalbum-cover-1.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">kavabanga Depo kolibri</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-2.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Johnyboy</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-3.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Noize MC</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-4.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Нервы</a><a class="media-link media-artist" href="">украинский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-5.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Макс Корж </a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/album/popularalbum-cover-1.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">kavabanga Depo kolibri</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-2.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Johnyboy</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-3.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Noize MC</a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-4.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Нервы</a><a class="media-link media-artist" href="">украинский реп</a></div>
+                  </div>
+                  <div class="media-elem">
+                    <div class="media-img-box"><img class="media-img" src="style/img/artist/popularartist-cover-5.jpg" alt="">
+                      <div class="media-play">
+                        <div class="media-play-btn"></div>
+                      </div>
+                    </div>
+                    <div class="media-info"><a class="media-link media-name" href="">Макс Корж </a><a class="media-link media-artist" href="">русский реп</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="wrapper-elem">
+                <button class="show-more"><img class="show-more-img" src="style/img/icon/more-icon.svg" alt=""><span class="show-more-text">Показать больше</span></button>
+                <div class="pagination"><a class="pagination-elem pagination-nav disabled" href="">
+                    <svg class="pagination-nav-icon" width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7 1L1 8.71635L7 16" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+                    </svg></a><a class="pagination-elem" href="">1</a><a class="pagination-elem active" href="">2</a><a class="pagination-elem" href="">3</a><a class="pagination-elem" href="">4</a><a class="pagination-elem" href="">5</a><a class="pagination-elem" href="">... </a><a class="pagination-elem" href="">15</a><a class="pagination-elem pagination-nav" href="">
+                    <svg class="pagination-nav-icon" width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 16L7 8.28365L1 1" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+                    </svg></a></div>
+              </div>
+            </div>
+            <footer class="footer">
+              <div class="footer-elem">© 2020 Musmore</div><a class="footer-elem footer-nav" href="">Для правобладателей (DMCA)</a><a class="footer-elem footer-nav" href="">Контакты</a><a class="footer-elem footer-link" href="mailto:musmore.supp@gmail.com">musmore.supp@gmail.com</a>
+            </footer>
+          </div>
+          <div class="wrapper-sidebar">
+            <div class="sidebar-elem">
+              <div class="sidebar-heading">Топ жанры</div>
+              <div class="tag"><a class="tag-elem" href="">поп</a><a class="tag-elem" href="">клубная</a><a class="tag-elem" href="">рок</a><a class="tag-elem" href="">dance </a><a class="tag-elem" href="">шансон</a><a class="tag-elem" href="">транс</a><a class="tag-elem" href="">реп</a><a class="tag-elem" href="">релакс</a><a class="tag-elem" href="">хип-хоп</a></div>
+            </div>
+            <div class="sidebar-elem">
+              <div class="sidebar-heading">Топ 10 треков</div>
+              <div class="sidebar-track-wrap">
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Новый Рассвет</a><a class="media-link media-artist" href="">Anivar</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">After Hours</a><a class="media-link media-artist" href="">The Weeknd</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Новый Рассвет</a><a class="media-link media-artist" href="">Anivar</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Луна не знает пути</a><a class="media-link media-artist" href="">Тайпан, Agunda</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div><a class="sidebar-more-btn" href="">+ Показать еще</a>
+            </div>
+            <div class="sidebar-elem">
+              <div class="sidebar-heading">Свежие поступления</div>
+              <div class="sidebar-track-wrap">
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Новый Рассвет</a><a class="media-link media-artist" href="">Anivar</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">After Hours</a><a class="media-link media-artist" href="">The Weeknd</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Новый Рассвет</a><a class="media-link media-artist" href="">Anivar</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="sidebar-track">
+                  <div class="meida-info"><a class="media-link media-name" href="">Луна не знает пути</a><a class="media-link media-artist" href="">Тайпан, Agunda</a></div>
+                  <div class="sidebar-track-btn">
+                    <svg class="sidebar-track-btn-icon sidebar-track-play" width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515"></path>
+                    </svg>
+                    <svg class="sidebar-track-btn-icon sidebar-track-pause" width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M3 0H0V10H3V0Z" fill="#151515"></path>
+                      <path d="M8 0H5V10H8V0Z" fill="#151515"></path>
+                    </svg>
+                  </div>
+                </div>
+              </div><a class="sidebar-more-btn" href="">+ Показать еще</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p">
+      <div class="p-progress"></div>
+      <div class="p-wrapper">
+        <div class="p-control">
+          <button class="p-control-btn p-control-back">
+            <svg class="p-control-img" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="p-control-img-elem" d="M2 7.33317L11 0.982318L11 13.684L2 7.33317Z" fill="#C4C4C4"></path>
+              <rect class="p-control-img-elem" x="2" y="13.6665" width="2" height="13" transform="rotate(-180 2 13.6665)" fill="#C4C4C4"></rect>
+            </svg>
+          </button>
+          <button class="p-control-btn p-control-play"><img class="p-control-img p-control-img-play" src="style/img/icon/play-btn.svg" alt=""><img class="p-control-img p-control-img-pause" src="style/img/icon/pause-icon.svg"></button>
+          <button class="p-control-btn p-control-forward">
+            <svg class="p-control-img" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="p-control-img-elem" d="M12 7.33333L3 13.6842L3 0.98248L12 7.33333Z" fill="#C4C4C4"></path>
+              <rect class="p-control-img-elem" x="12" y="1" width="2" height="13" fill="#C4C4C4"></rect>
+            </svg>
+          </button>
+        </div>
+        <div class="p-song">
+          <div class="p-song-img-box"> <img class="p-song-img" src="style/img/tracklist/tracklist-cover-2.jpg" alt=""></div>
+          <div class="p-song-info"><a class="media-link media-name" href="">Луна не знает пути</a><a class="media-link media-artist" href="">Тайпан, Agunda</a></div>
+        </div>
+        <div class="p-track-control">
+          <div class="track-control-item track-like active">
+            <svg class="track-control-icon" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg><span class="track-like-value">35 450</span>
+          </div>
+          <div class="track-control-item track-share">
+            <svg class="track-control-icon" width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+          <div class="track-control-item track-add">
+            <svg class="track-control-icon track-control-add-icon" width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5"></path>
+            </svg>
+            <svg class="track-control-icon track-control-add-checkmark-icon" width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10"></path>
+            </svg>
+          </div>
+          <div class="track-control-item track-download">
+            <svg class="track-control-icon" width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"></path>
+              <path d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"></path>
+              <path d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="p-track-control p-track-control-r">
+          <div class="track-control-item track-hq p-track-control"><span class="track-hq-icon">HQ</span></div>
+          <div class="track-control-item track-shuffle p-track-control">
+            <svg class="track-control-icon track-shuffle-icon" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 12.9939L2.0101 12.9939C4.13187 12.9939 6.14196 12.151 7.5937 10.4653L11.1672 6.49181C12.6189 4.92649 14.629 3.96322 16.7508 3.96322L17.7559 3.96322" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path d="M6.81204 5.28784C5.3603 3.72252 3.35021 2.75925 1.22844 2.75925L0.223389 2.75925" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path d="M18.0909 11.79L16.0809 11.79C15.2991 11.79 14.6291 11.6696 13.8474 11.4288" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path class="track-control-icon-fill" d="M21.7858 4.29024L18.1006 7.18006C17.989 7.30047 17.7656 7.18006 17.7656 6.93924L17.7656 1.15961C17.7656 0.918789 17.989 0.79838 18.1006 0.918789L21.7858 3.80861C21.8975 3.92901 21.8975 4.16983 21.7858 4.29024Z" fill="#808080"></path>
+              <path class="track-control-icon-fill" d="M21.7858 11.635L18.1006 8.7452C17.989 8.62479 17.7656 8.7452 17.7656 8.98602L17.7656 14.7657C17.7656 15.0065 17.989 15.1269 18.1006 15.0065L21.7858 12.1167C21.8975 11.9962 21.8975 11.7554 21.7858 11.635Z" fill="#808080"></path>
+            </svg>
+          </div>
+          <div class="track-control-item track-repeat p-track-control">
+            <svg class="track-control-icon track-repeat-icon" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="track-control-icon-fill" d="M18.5762 4.02289L15.4521 6.29492V1.75085L18.5762 4.02289Z" fill="#808080" stroke="#808080"></path>
+              <path d="M14.952 4.02295H5.36865C3.52127 4.02295 2.02026 5.52395 2.02026 7.37134V8.06411" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path class="track-control-icon-fill" d="M1.5137 13.9526L4.63775 11.6805V16.2246L1.5137 13.9526Z" fill="#808080" stroke="#808080"></path>
+              <path d="M5.02246 13.9525H14.7212C16.5686 13.9525 18.0696 12.4515 18.0696 10.6041V9.91138" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+            </svg>
+          </div>
+          <div class="track-control-item track-volume">
+            <svg class="track-control-icon track-valume-icon" width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.2493 14.5997V1.43481L5.84805 5.46079H1.5V10.614H5.84805L12.2493 14.5997Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+              <path d="M14.4636 4.49451C15.9532 5.01788 17 6.42697 17 8.07762C17 9.72827 15.913 11.1374 14.4233 11.6607" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10"></path>
+            </svg>
+            <div class="track-volume-slider"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./style/js/plugin/jquery-3.4.1.min.js"></script>
+    <script src="./style/js/plugin/jquery-ui.min.js"></script>
+    <script src="./style/js/plugin/jquery.ui.touch-punch.min.js"></script>
+    <script src="./style/js/plugin/jquery.mask.min.js"></script>
+    <script src="./style/js/plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="./style/js/plugin/jquery.validate.min.js"></script>
+    <script src="./style/js/plugin/owl.carousel.min.js"></script>
+    <script src="./style/js/main.js"></script>
+  </body>
+</html>
