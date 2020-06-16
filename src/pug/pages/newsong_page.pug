@@ -1,67 +1,21 @@
 .main-wrapper
 	include ../var/top_line.pug
 
-	.wrapper.album-page
+	.wrapper.newsong-page
 		
 		.wrapper-box
 			.wrapper-content
 				.wrapper-elements
-					.wrapper-elem.header-info
-						.header-info-img-box
-							img(src="style/img/album/album-cover-1.jpg", alt="").header-info-img
-						.header-info-wrap
-							h1.header-info-name What Kinda Music
-							.header-info-list
-								.header-info-list-elem.header-info-album-artist
-									span.header-info-list-name Исполнитель:
-									span.header-info-list-value 
-										a(href="").header-info-list-link Tom Misch
-										a(href="").header-info-list-link Yussef Dayes
-								.header-info-list-elem
-									span.header-info-list-value.header-info-list-year 
-										a(href="").header-info-list-link 2020
-									span.header-info-list-value.header-info-list-genre 
-										a(href="").header-info-list-link Соул
-								.header-info-list-elem
-									span.header-info-list-name Длительность:
-									span.header-info-list-value 63 мин.
-								.header-info-list-elem
-									.header-info-list-elem
-										span.header-info-list-name Формат:
-										span.header-info-list-value MP3
-								.header-info-list-elem
-									span.header-info-list-name Кол-во треков:
-									span.header-info-list-value 12
-							.header-info-control
-								a(href="").header-info-play
-									span.header-info-play-btn
-									span.header-info-play-text Слушать
-								.track-control-item.track-like
-									svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
-										path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
-									span.track-like-value 35 450
-								.track-control-item.track-share
-									svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
-										path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-									.track-share-dropdown
-										a(href="#").track-share-dropdown-social.vk-link
-										a(href="#").track-share-dropdown-social.tw-link
-										a(href="#").track-share-dropdown-social.fb-link
-										a(href="#").track-share-dropdown-social.od-link
-										a(href="#").track-share-dropdown-copy
-											| Скопировать ссылку
-								.track-control-item.track-download
-									svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
-										path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-										path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-										path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-								.track-control-item.track-add
-									svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
-										path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
-									svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
-										path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
-								
+					.wrapper-elem.header-info.header-info-single
+						h1.header-info-name Новые
+
 					.wrapper-elem.wrapper-song
+						.wrapper-tab
+							a(href="#").wrapper-tab-elem.active за сегодня
+							a(href="#").wrapper-tab-elem за неделю
+							a(href="#").wrapper-tab-elem за месяц
+							a(href="#").wrapper-tab-elem за год
+						
 						.wrapper-tracklist
 							.track
 								.track-img-box
@@ -273,163 +227,167 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-				
-					.wrapper-elem.wrapper-album
-						.wrapper-heading
-							.wrapper-heading-title Другие альбомы исполнителя
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
+							.track
+								.track-img-box
+									img(src="style/img/tracklist/tracklist-cover-3.jpg", alt="").track-img
+									.track-play
+										.track-play-btn
+								.track-info
+									a(href="").media-link.media-name Покинула чат
+									a(href="").media-link.media-artist Клава Кока
+								.track-control
+									.track-control-item.track-like
+										svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+										span.track-like-value 35 450
+									.track-control-item.track-share
+										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+										.track-share-dropdown
+											a(href="#").track-share-dropdown-social.vk-link
+											a(href="#").track-share-dropdown-social.tw-link
+											a(href="#").track-share-dropdown-social.fb-link
+											a(href="#").track-share-dropdown-social.od-link
+											a(href="#").track-share-dropdown-copy
+												| Скопировать ссылку
+									.track-control-item.track-add
+										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
+											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
+										svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
+											path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
+									.track-control-item.track-duration
+										span.track-duration-value 02:30
+										.track-download
+											svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+							.track
+								.track-img-box
+									img(src="style/img/tracklist/tracklist-cover-4.jpg", alt="").track-img
+									.track-play
+										.track-play-btn
+								.track-info
+									a(href="").media-link.media-name After Hours
+									a(href="").media-link.media-artist The Weeknd
+								.track-control
+									.track-control-item.track-like
+										svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+										span.track-like-value 35 450
+									.track-control-item.track-share
+										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+										.track-share-dropdown
+											a(href="#").track-share-dropdown-social.vk-link
+											a(href="#").track-share-dropdown-social.tw-link
+											a(href="#").track-share-dropdown-social.fb-link
+											a(href="#").track-share-dropdown-social.od-link
+											a(href="#").track-share-dropdown-copy
+												| Скопировать ссылку
+									.track-control-item.track-add
+										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
+											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
+										svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
+											path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
+									.track-control-item.track-duration
+										span.track-duration-value 02:30
+										.track-download
+											svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+							.track
+								.track-img-box
+									img(src="style/img/tracklist/tracklist-cover-5.jpg", alt="").track-img
+									.track-play
+										.track-play-btn
+								.track-info
+									a(href="").media-link.media-name UNO
+									a(href="").media-link.media-artist Little Big
+								.track-control
+									.track-control-item.track-like
+										svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+										span.track-like-value 35 450
+									.track-control-item.track-share
+										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+										.track-share-dropdown
+											a(href="#").track-share-dropdown-social.vk-link
+											a(href="#").track-share-dropdown-social.tw-link
+											a(href="#").track-share-dropdown-social.fb-link
+											a(href="#").track-share-dropdown-social.od-link
+											a(href="#").track-share-dropdown-copy
+												| Скопировать ссылку
+									.track-control-item.track-add
+										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
+											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
+										svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
+											path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
+									.track-control-item.track-duration
+										span.track-duration-value 02:30
+										.track-download
+											svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+							.track
+								.track-img-box
+									img(src="style/img/tracklist/tracklist-cover-6.jpg", alt="").track-img
+									.track-play
+										.track-play-btn
+								.track-info
+									a(href="").media-link.media-name Луна не знает пути
+									a(href="").media-link.media-artist Тайпан, Agunda
+								.track-control
+									.track-control-item.track-like
+										svg(width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M8.68295 15C0.449777 9.41379 1.00796 5.48276 1.00796 5.48276C1.00796 3 3.03136 1 5.54318 1C6.72931 1 7.84567 1.48276 8.68295 2.24138C9.52022 1.48276 10.5668 1 11.8227 1C14.3345 1 16.3579 3 16.3579 5.48276C16.3579 5.48276 16.9161 9.41379 8.68295 15Z" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round")
+										span.track-like-value 35 450
+									.track-control-item.track-share
+										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+										.track-share-dropdown
+											a(href="#").track-share-dropdown-social.vk-link
+											a(href="#").track-share-dropdown-social.tw-link
+											a(href="#").track-share-dropdown-social.fb-link
+											a(href="#").track-share-dropdown-social.od-link
+											a(href="#").track-share-dropdown-copy
+												| Скопировать ссылку
+									.track-control-item.track-add
+										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
+											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
+										svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
+											path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
+									.track-control-item.track-duration
+										span.track-duration-value 02:30
+										.track-download
+											svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
+												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
+							
 
-						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Романы. Часть 2
-									a(href="").media-link.media-artist Филипп Киркоров
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Парабола
-									a(href="").media-link.media-artist Мот
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Самоизоляция 
-									a(href="").media-link.media-artist Sobol
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-
-					.wrapper-elem.wrapper-album
-						.wrapper-heading
-							.wrapper-heading-title Похожие альбомы
-							a(href="").wrapper-heading-link 
-								| Смотреть всё
-								svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
-									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
-
-						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Романы. Часть 2
-									a(href="").media-link.media-artist Филипп Киркоров
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Парабола
-									a(href="").media-link.media-artist Мот
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Самоизоляция 
-									a(href="").media-link.media-artist Sobol
-
-					.wrapper-elem.wrapper-comment
-						.wrapper-heading
-							.wrapper-heading-title Комментарии
-								span.wrapper-heading-comment-value 23
+					.wrapper-elem
+						button.show-more
+							img(src="style/img/icon/more-icon.svg", alt="").show-more-img 
+							span.show-more-text Показать больше
 						
-						form(action="").comment-form
-							input(type="text" name="userName" placeholder="Имя").comment-input
-							textarea(name="commentText" placeholder="Комментарий").comment-textarea
-							button.comment-button Отправить
-
-
-						.comment-box
-							.comment-item
-								.comment-img-box
-									img(src="", alt="").comment-img
-								.comment-info
-									.comment-heading
-										span.comment-heading-name Артём
-										span.comment-heading-date 21 апреля в 20:27
-									.comment-text
-										| Лучшая рэп-музыка, которую я когда-либо слышала!!!
-							.comment-item
-								.comment-img-box
-									img(src="style/img/comment/comment-img-1.png", alt="").comment-img
-								.comment-info
-									.comment-heading
-										span.comment-heading-name Константин
-										span.comment-heading-date 21 апреля в 20:27
-									.comment-text
-										| "Ленинград" - шедевр. Братва, жду от вас искусства!
-							.comment-item
-								.comment-img-box
-									img(src="style/img/comment/comment-img-2.png", alt="").comment-img
-								.comment-info
-									.comment-heading
-										span.comment-heading-name Константин
-										span.comment-heading-date 21 апреля в 20:27
-									.comment-text
-										| Отличный по ассортименту и удобству пользования сайт. Спасибо разработчикам! 
-										| Желаю дальнейших успехов, так как совершенствованию нет предела.
+						.pagination
+							a(href="").pagination-elem.pagination-nav.disabled
+								svg(width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg").pagination-nav-icon
+									path(d="M7 1L1 8.71635L7 16" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10")
+							a(href="").pagination-elem 1
+							a(href="").pagination-elem.active 2
+							a(href="").pagination-elem 3
+							a(href="").pagination-elem 4
+							a(href="").pagination-elem 5
+							a(href="").pagination-elem ... 
+							a(href="").pagination-elem 15
+							a(href="").pagination-elem.pagination-nav
+								svg(width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg").pagination-nav-icon
+									path(d="M1 16L7 8.28365L1 1" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10")
 
 				include ../var/footer.pug
 				

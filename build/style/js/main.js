@@ -144,11 +144,61 @@ $(function() {
 	// Add active on add song btn
 	//
 
-	if($('.usersong-page').length) {
+	if($('.usermusic-page').length) {
 		$('.track').find('.track-add').addClass('active');
 	}
 
 	//
 	// Add active on add song btn end
+	//
+
+	//
+	// Add active on like btn 
+	//
+
+
+	if($('.cabinet-page').length) {
+		$('.track').find('.track-like').addClass('active');
+	}
+
+	//
+	// Add active on like btn end 
+	//
+
+	//
+	// Show/hide username input
+	//
+
+	$('.username-change-btn').click(function() {
+		$('.username').hide();
+		$('.username-change-form').addClass('active')
+	});
+
+	$('.username-change-close').click(function() {
+		$('.username').show();
+		$('.username-change-form').removeClass('active');
+	});
+
+	//
+	// Show/hide username input end
+	//
+
+
+	//
+	// Show/close ganres
+	//
+
+	$('.ganre-heading-select').click(function() {
+		$('.ganre-heading-info').hide();
+		$('.ganre-heading-tag').show();
+	})
+
+	$('.ganre-heading-close-btn').click(function() {
+		$('.ganre-heading-info').show();
+		$('.ganre-heading-tag').hide();
+	});
+
+	//
+	// Show/close ganres end 
 	//
 });

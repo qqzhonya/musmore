@@ -51,6 +51,7 @@ select
 	outline: none
 	border-radius: 0
 	-moz-appearance: none
+  -webkit-appearance: none
   +prefix(appearance, none)
 
 a
@@ -100,10 +101,6 @@ a
 		&:last-child
 			margin: 0
 
-	&-tracklist
-		margin:
-			top: 30px
-
 	&-heading
 		+flex
 		margin:
@@ -151,13 +148,18 @@ a
 			color: $font-light-color
 
 	&-tab
+		margin:
+			bottom: 30px
 
 		&-elem
 			display: inline-block
 			position: relative
 			margin:
 				right: -1px
-			padding: 10px
+			padding: 10px 15px
+			font-size: 14px
+			line-height: 14px
+			font-weight: 500
 			color: $font-dark-color
 			border: 1px solid #c4c4c4
 			text-transform: lowercase
@@ -180,6 +182,28 @@ a
 			color: $accent-color
 			border-color: $accent-color	
 			z-index: 2
+
+	&-text
+		&-elem
+			margin: 
+				bottom: 15px
+			font-size: 16px
+			line-height: 32px 
+			font-weight: 500
+			color: $font-dark-color 
+
+		&-title
+			margin:
+				top: 35px
+				bottom: 15px
+			font-size: 22px
+			line-height: 32px
+		
+		&-link
+			color: #0054B9
+
+			&:hover
+				text-decoration: underline
 
 .wrapper.main-page
 	padding: 
@@ -619,7 +643,7 @@ a
 		margin:
 			right: 9px
 			bottom: 9px
-		padding: 8px 10px
+		padding: 7px 10px 8px 10px
 		font-size: 14px
 		line-height: 14px
 		color: $font-dark-color
@@ -645,6 +669,10 @@ a
 		height: 200px
 		border-radius: 5px
 		overflow: hidden
+		background-image: url(../img/icon/person-icon.svg)
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
 	
 	&-img
 		display: block
@@ -680,6 +708,27 @@ a
 	&-name
 		font-size: 35px
 		font-weight: 700
+
+	&-email
+		margin:
+			top: 5px
+	
+	&-btn
+		display: inline-block
+		margin:
+			top: 10px
+		padding: 7px 20px 8px 20px
+		font-size: 15px
+		line-height: 28px
+		font-weight: 500
+		border: 1px solid $accent-color
+		border-radius: 50px
+		color: $font-dark-color
+		+prefix(transition, $default-transition)
+
+		&:hover
+			color: $white-color
+			background-color: $accent-color
 
 	&-list
 		+flex
@@ -743,6 +792,41 @@ a
 	&-album-artist
 		width: 100%
 		max-width: 100%
+
+	&-select-wrap
+		display: inline-block
+		margin:
+			left: 20px
+		position: relative
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			margin:
+				top: -3px
+			top: 50%
+			right: 15px
+			width: 12px
+			height: 6px
+			background-image: url(../img/icon/arrow-down-blk-icon.svg)
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+
+	&-select
+		padding: 12px 15px
+		min-width: 190px
+		font-size: 14px
+		line-height: 14px
+		font-weight: 500
+		background-color: #fff
+		border: $border-param
+		border-radius: 5px
+		-webkit-appearance: none
+	
+	&-select::-ms-expand
+		display: none
 
 	&-control
 		+flex
@@ -832,6 +916,194 @@ a
 	display: block
 	margin:
 		bottom: 25px
+
+.header-info-mood
+	+flex
+	margin:
+		bottom: 25px
+	+align-items(center)
+
+.ganre-heading
+	position: relative
+	margin:
+		top: -30px 
+		right: -30px
+		left: -30px
+		bottom: 30px
+	min-height: 290px
+	max-height: 290px
+
+	&-bg
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		background-image: url(../img/ganre-heading.jpg)
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		z-index: 0
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			background: rgb(0,0,0)
+			background: -moz-radial-gradient(circle, rgba(0,0,0,0) 5%, rgba(0,0,0,0.74) 100%)
+			background: -webkit-radial-gradient(circle, rgba(0,0,0,0) 5%, rgba(0,0,0,0.74) 100%)
+			background: radial-gradient(circle, rgba(0,0,0,0) 5%, rgba(0,0,0,0.74) 100%)
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1)
+
+	&-info
+		+flex
+		position: relative
+		padding: 30px
+			bottom: 0
+		height: 100%
+		min-height: 290px
+		color: $white-color
+		+flex-flow(column)
+		+justify-content(space-between)
+		z-index: 1
+
+	&-select
+		position: relative
+		padding: 12px 15px
+		max-width: 190px
+		font-size: 14px
+		line-height: 14px
+		font-weight: 500
+		color: #E5E5E5
+		background-color: transparent
+		border: $border-param
+		border-radius: 5px
+		-webkit-appearance: none
+		cursor: pointer
+		+prefix(transition, $default-transition)
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			margin:
+				top: -3px 
+			top: 50%
+			right: 15px
+			width: 12px
+			height: 6px
+			background-image: url(../img/icon/arrow-down-wht-icon.svg)
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat 
+
+		&:hover
+			color: $white-color
+			border-color: $white-color
+			background-color: rgba(255,255,255,.15)
+
+	&-title
+		margin:
+			bottom: 30px
+		font-size: 35px
+		line-height: 35px
+
+	.second-tab
+		border: 0
+
+		.second-tab-elem
+			color: rgba(255, 255, 255, .8)
+
+			&::after
+				bottom: 0
+
+			&:hover
+				color: $accent-color
+
+		.second-tab-elem.active
+			color: $white-color 
+
+	&-tag
+		display: none
+		position: relative
+		padding: 35px 30px
+		width: 100%
+		height: 100%
+		min-height: 290px
+		max-height: 290px
+		background-color: $white-color
+		border-bottom: $border-param
+		border-left: $border-param
+		z-index: 1
+
+	&-close-btn
+		+flex
+		padding: 3px 10px 4px 10px
+		max-height: 31px
+		font-size: 14px
+		line-height: 14px
+		font-weight: 500
+		background-color: transparent
+		border: 0
+		+align-items(center)
+		cursor: pointer
+
+		img 
+			margin: 
+				top: -4px
+			width: 11px 
+			height: 11px
+			+prefix(transition, $default-transition)
+		
+		span
+			margin:
+				left: 10px
+
+		&:hover
+			img
+				+prefix(transform, rotate(90deg))
+
+.second-tab
+	margin: 0 -30px
+		bottom: 35px
+	padding: 0 30px
+	border-bottom: $border-param
+
+	&-elem
+		display: inline-block
+		position: relative
+		margin:
+			right: 25px
+		padding: 
+			bottom: 15px
+		font-weight: 700
+		color: $font-dark-color
+		+prefix(transition, $default-transition)
+
+		&::after
+			content: ''
+			display: none
+			position: absolute
+			bottom: -1px
+			left: 0
+			width: 100%
+			height: 2px
+			background-color: $accent-color
+
+		&:hover
+			color: $accent-color
+	
+	&-elem.active
+		&::after
+			display: block
 
 .show-more
 	+flex
