@@ -101,6 +101,13 @@ a
 		&:last-child
 			margin: 0
 
+	&-song
+		.track
+			&-share
+				&-dropdown-wrap
+					padding:
+						top: 35px
+
 	&-heading
 		+flex
 		margin:
@@ -441,27 +448,37 @@ a
 
 	&-share
 		position: relative
+
+		&:hover
+			.track-share-dropdown-wrap
+				display: block
 		
-		&-dropdown
+		&-dropdown-wrap
 			display: none
 			position: absolute
-			padding: 19px 20px
-			bottom: -80px
+			padding:
+				top: 60px
+			top: 0
 			left: 50%
+			+prefix(transform, translateX(-51.5%))
+			z-index: 20
+
+		&-dropdown
+			+flex
+			position: relative
+			padding: 19px 20px
 			min-width: 355px
 			background-color: $white-color
 			border: $border-param
 			border-radius: 5px
-			+prefix(transform, translateX(-52%))
 			+align-items(center)
 			+justify-content(flex-start)
-			z-index: 20
 
 			&::before
 				content: ''
 				display: block
 				position: absolute
-				top: -6px
+				top: -7px
 				left: 50%
 				width: 12px 
 				height: 12px
@@ -524,9 +541,6 @@ a
 			&-social:hover,
 			&-copy:hover
 				opacity: $default-opacity
-
-		&-dropdown.active
-			+flex
 
 .media
 	&-wrapper
@@ -686,6 +700,7 @@ a
 		max-width: 100%
 		height: 100%
 		max-height: 100%
+		object-fit: cover
 
 	&-artist
 		.header-info-img-box
@@ -1170,3 +1185,268 @@ a
 		.pagination-nav-icon
 			path
 				stroke: #C4C4C4
+
+.main-form
+	+flex
+	+flex-flow(column)
+	+align-items(flex-start)
+	max-width: 400px
+
+	&-input-wrap
+		position: relative
+		width: 100%
+
+		label.error
+			position: absolute
+			font-size: 12px
+			color: red
+			left: 20px
+			bottom: 15px
+
+	&-input
+		margin:
+			bottom: 10px
+		padding: 15px 20px
+		width: 100%
+		font-size: 16px
+		line-height: 28px
+		color: $font-dark-color
+		border: $border-param
+		border-radius: 8px
+		+prefix(transition, $default-transition)
+
+		+placeholder()
+			color: #C4C4C4
+		
+		&:focus
+			border-color: #0054B9
+
+			+placeholder()
+				color: #b3b3b3
+	
+	&-btn
+		display: inline-block
+		position: relative
+		padding: 16px 30px
+		min-width: 130px
+		font-size: 16px
+		font-weight: 700
+		line-height: 28px
+		color: $font-dark-color
+		border: 0
+		background-color: $accent-color
+		border-radius: 50px
+		cursor: pointer
+		+prefix(transition, $default-transition)
+		overflow: hidden
+
+		span
+			position: relative
+			z-index: 2
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border: 2px solid $accent-color
+			border-radius: 50px
+			background-color: transparent
+			z-index: 1
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -50px
+			left: 50%
+			width: 50px
+			height: 50px
+			border-radius: 50%
+			background-color: $white-color
+			z-index: 0
+			+prefix(transition, $default-transition)
+			+prefix(transform, translateX(-50%))
+
+		&:hover
+			&::after
+				+prefix(transform, scale(7))
+
+		&-wrap
+			+flex
+			margin:
+				top: 20px
+			+align-items(center)
+
+	&-link
+		display: block
+		margin:
+			left: 20px
+		font-size: 14px
+		line-height: 28px
+		color: #0054B9
+		
+		&:hover
+			text-decoration: underline
+
+.social-login
+	margin:
+		bottom: 25px
+
+	&-title
+		margin:
+			top: 20px
+		font-size: 16px
+		line-height: 28px
+		color: $font-dark-color
+	
+	&-list
+		+flex
+		margin:
+			top: 10px
+
+	&-item
+		+flex
+		position: relative
+		margin:
+			right: 10px
+		padding: 10px
+		width: 45px
+		height: 45px
+		border: 1px solid transparent
+		border-radius: 8px
+		+prefix(transition, $default-transition)
+		cursor: pointer
+
+		svg
+			position: relative
+			margin: auto
+			max-height: 18px
+			z-index: 1
+
+			path
+				+prefix(transition, $default-transition)
+
+		&:hover
+			path,
+			circle
+				fill: $white-color
+	
+	&-item.social-go
+		border-color: #5085ED
+
+		&:hover
+			background-color: #5085ED
+			
+	&-item.social-od
+		border-color: #D96B2A
+
+		&:hover
+			background-color: #D96B2A
+	
+	&-item.social-vk
+		border-color: #5279A4
+
+		&:hover
+			background-color: #5279A4
+	
+	&-item.social-fb
+		border-color: #405994
+
+		&:hover
+			background-color: #405994
+	
+	&-item.social-mail
+		border-color: #F4AC4C
+
+		&:hover
+			background-color: #F4AC4C
+
+	&-item.social-login-more
+		border-color: #000
+
+		&:hover
+			background-color: #000
+	
+	&-more
+		
+		&:hover
+			.social-login-more-dropdown-wrap
+				display: block
+
+		&-dropdown-wrap
+			display: none 
+			position: absolute
+			padding:
+				top: 65px
+			top: 0
+			right: -15px
+			z-index: 20
+
+		&-dropdown
+			position: relative	
+			padding: 20px
+				right: 30px
+			background-color: $white-color
+			border: 1px solid #EEEEEE
+			border-radius: 8px
+			+box-shadow(0px 6px 20px rgba(0, 0, 0, 0.1))
+
+			&::before
+				content: ''
+				display: block
+				position: absolute
+				top: -7px
+				right: 27px
+				width: 12px 
+				height: 12px
+				background-color: $white-color
+				border-top: 1px solid #EEEEEE
+				border-left: 1px solid #EEEEEE
+				+prefix(transform, rotate(45deg))
+
+		&-item
+			+flex
+			font-size: 14px
+			font-weight: 500
+			color: $font-dark-color
+			line-height: 38px
+			+align-items(center)
+
+			&:hover
+				text-decoration: underline
+
+		&-item.social-more-inst
+			.social-login-more-img
+				background-color: #E53E73
+		
+		&-item.social-more-twitter
+			.social-login-more-img
+				background-color: #6AABE9
+
+		&-item.social-more-ya
+			.social-login-more-img
+				background-color: #EC4234
+
+		&-item.social-more-lf
+			.social-login-more-img
+				background-color: #B5291B
+		
+		&-item.social-more-sc
+			.social-login-more-img
+				background-color: #EE6F2D
+
+		&-img
+			+flex
+			margin: 
+				right: 8px
+			width: 24px
+			height: 24px 
+			background-color: lightgray
+			border-radius: 100%
+
+			img
+				margin: auto

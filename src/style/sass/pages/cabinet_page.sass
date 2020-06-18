@@ -2,7 +2,7 @@
 	.header-info
 		&-wrap
 			margin:
-				top: 25px
+				top: 10px
 				left: 10px
 		
 		&-name,
@@ -13,10 +13,56 @@
 
 		&-name
 			padding:
-				bottom: 17px
+				top: 16px
+				bottom: 16px
+				left: 1px
 			font-size: 28px
 			line-height: 28px
 		
+		.userphoto-change
+			+flex
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: rgba(21, 21, 21, .5)
+			opacity: 0
+			+prefix(transition,  $default-transition)
+
+			&-input
+				margin: auto
+				width: 100%
+				height: 100%
+				font-size: 0
+				color: transparent
+				cursor: pointer
+				+prefix(transition, $default-transition)
+
+				&::-webkit-file-upload-button
+					visibility: hidden
+				
+				&::before
+					content: ''
+					display: block
+					position: absolute
+					top: 50%
+					left: 50%
+					width: 35px
+					height: 32px
+					background-image: url(../img/icon/camera-icon.svg)
+					background-size: cover
+					background-position: center center
+					background-repeat: no-repeat
+					+prefix(transform, translate(-50%, -50%))
+
+				&:hover
+					opacity: $default-opacity
+		
+		.header-info-img-box:hover
+			.userphoto-change
+				opacity: 1
+
 		.username-change
 
 			&-btn
@@ -37,8 +83,6 @@
 			
 			&-form
 				display: none
-				margin:
-					top: -15px
 				+align-items(flex-start)
 				max-width: 460px
 				border: $border-param

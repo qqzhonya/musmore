@@ -123,24 +123,6 @@ $(function() {
 	//
 
 	//
-	// Share show
-	//
-
-	$('.track-share').click(function() {
-		$(this).toggleClass('active');
-
-		if($(this).hasClass('active')) {
-			$(this).find('.track-share-dropdown').addClass('active');
-		} else {
-			$(this).find('.track-share-dropdown').removeClass('active');
-		}
-	});
-
-	//
-	// Share show end 
-	//
-
-	//
 	// Add active on add song btn
 	//
 
@@ -200,5 +182,74 @@ $(function() {
 
 	//
 	// Show/close ganres end 
+	//
+
+	//
+	// Validation
+	//
+
+	$('.validateForm').each(function() {
+		$.validator.addMethod(
+			"regex",
+			function(value, element, regexp)  {
+
+					if (regexp && regexp.constructor != RegExp) {
+						regexp = new RegExp(regexp);
+					}
+
+					else if (regexp.global) regexp.lastIndex = 0;
+
+					return this.optional(element) || regexp.test(value);
+			}
+		);
+
+		var $userEmail = $(this).find('.formEmail').attr('name');
+		var $userPassword = $(this).find('.formPassword').attr('name');
+		var $confirmPassword = $(this).find('.formConfirmPassword').attr('name');
+		var $userName = $(this).find('.formUsername').attr('name');
+		var $params = {debug:false, rules:{}, messages:{}};
+
+		$params['rules'][$userEmail] = {
+			"required": true, 
+			"email": true, 
+			"regex": /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+		}
+		$params['messages'][$userEmail] = {
+			"required": "Необходимо указать E-mail",
+			"email": "Неверный E-mail",
+			"regex": "Неверный E-mail"
+		};
+
+		$params['rules'][$userPassword] = {
+			"minlength": 8
+		}
+		$params['messages'][$userPassword] = {
+			"required": "Пароль должен содержать не менее 8 символов",
+			"minlength": "Пароль должен содержать не менее 8 символов"
+		};
+
+		$params['rules'][$confirmPassword] = {
+			"minlength": 8,
+			"equalTo": "#newPassword"
+		}
+		$params['messages'][$confirmPassword] = {
+			"required": "Пароль должен содержать не менее 8 символов",
+			"minlength": "Пароль должен содержать не менее 8 символов",
+			"equalTo": "Пароли должны совпадать"
+		};
+
+		$params['rules'][$userName] = {
+			"required": true
+		}
+		$params['messages'][$userName] = {
+			"required": "Заполните поле"
+		};
+
+
+		$(this).validate($params);
+	});
+
+	//
+	// Validation end
 	//
 });
