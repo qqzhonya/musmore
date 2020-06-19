@@ -88,40 +88,6 @@ $(function() {
 		$(this).toggleClass('active');
 	});
 
-
-	//
-	// Song timeline
-	//
-
-	$('.p-progress').slider({
-		orientation: "horizontal",
-		range: "min",
-		max: 100,
-		value: 30,
-		animate: true
-	});
-
-	//
-	// Song timeline end 
-	//
-
-	//
-	// Volume
-	//
-
-	$( ".track-volume-slider" ).slider({
-		value: 60,
-		orientation: "horizontal",
-		range: "min",
-		max: 100,
-		value: 30,
-		animate: true
-	})
-
-	//
-	// Volume end
-	//
-
 	//
 	// Add active on add song btn
 	//
@@ -251,5 +217,228 @@ $(function() {
 
 	//
 	// Validation end
+	//
+
+	//
+	// Player
+	//
+
+	var savedVolume = localStorage.volume || 100;
+	var tmpVolume = 100;
+	var $myPlayer = $('#jquery_jplayer');
+
+	var arrOfPlaylist = [{
+		artist: "Alicia Keys",
+		title: "Good Job",
+		mp3: "http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+		poster: "style/img/tracklist/tracklist-cover-1.jpg",
+		id: 'track-id-000'
+	}];
+
+	var myPlaylist = new jPlayerPlaylist({
+			jPlayer: $myPlayer,
+			cssSelectorAncestor: "#jp_container"
+		},
+
+		arrOfPlaylist,
+
+		{
+			useStateClassSkin: true,
+			playlistOptions: {
+				displayTime: 0,
+				addTime: 0,
+				removeTime: 0,
+				shuffleTime: 0
+			},
+
+			play: function (e) {
+				setTrackData(e);
+
+				// синхроним классы паузы и играющего итема
+				var $playlistCurrent = $('a.jp-playlist-current');
+				var $plcID = $playlistCurrent.data('id');
+
+				$('.mustoggler_paused').removeClass('mustoggler_paused');
+				$('.mustoggler_playing').removeClass('mustoggler_playing');
+
+				$('[data-musid=' + $plcID + ']').addClass('mustoggler_playing');
+			},
+
+			pause: function (e) {
+				var $currentPlaying = $('.mustoggler_playing');
+
+				$currentPlaying.addClass('mustoggler_paused');
+			},
+
+			loadstart: function (e) {
+				setTrackData(e);
+				setPlayerVolume(savedVolume);
+			},
+
+			timeupdate: function (e) {
+				//синхроним время песни в плеере с итемом
+				var $timeInPlayer = $('.jp-current-time').html();
+				var $currenDurDiv = $('.mustoggler_playing').find('.track__duration');
+
+				$currenDurDiv.html($timeInPlayer);
+			}
+		});
+
+	$(".jp-volume-bar").slider({
+		range: "min",
+		min: 0,
+		max: 100,
+		value: savedVolume,
+
+		slide: function (event, ui) {
+			setPlayerVolume(ui.value);
+			saveVolume(ui.value);
+		}
+	});
+
+	$(".jp-track-durbar").slider({
+		range: "min",
+		min: 0,
+		max: 100,
+		value: 0,
+
+		slide: function (event, ui) {
+			$myPlayer.jPlayer("playHead", ui.value);
+		},
+
+		create: function () {
+			$myPlayer.jPlayer("option", "cssSelector.seekBar", '.jp-track-durbar');
+			$myPlayer.jPlayer("option", "cssSelector.playBar", ".jp-track-durbar .ui-slider-range");
+		}
+	});
+
+	function setTrackData(e) {
+		var title = e.jPlayer.status.media.title,
+			poster = e.jPlayer.status.media.poster,
+			artist = e.jPlayer.status.media.artist,
+			$trackInfo = $('.jp-track-info');
+
+		$trackInfo.find('.jp-track-info__track').text(title);
+		$trackInfo.find('.jp-track-info__artist').text(artist);
+		$trackInfo.find('.jp-track-info__img').css('background-image', 'url("' + poster + '")');
+	};
+
+	function setPlayerVolume(vol) {
+		var $volBtn = $('.jp-volume-ico');
+
+		(vol > 0) ? $volBtn.removeClass('muted'): $volBtn.addClass('muted');
+
+		$myPlayer.jPlayer("volume", vol / 100);
+	};
+
+	function saveVolume(vol) {
+		localStorage.volume = vol;
+	};
+
+	function getCurrentVolume() {
+		return localStorage.volume;
+	};
+
+	$('.jp-volume-ico').on('click', function () {
+		var $this = $(this);
+		var isMuted = $this.hasClass('muted');
+
+		if (isMuted) {
+
+			$(".jp-volume-bar").slider("value", tmpVolume);
+			setPlayerVolume(tmpVolume);
+			saveVolume(tmpVolume)
+
+		} else {
+
+			tmpVolume = getCurrentVolume();
+
+			$(".jp-volume-bar").slider("value", 0);
+			setPlayerVolume(0);
+			saveVolume(0);
+
+		};
+	});
+
+	$('.mustoggler').on('click', function (e) {
+		e.stopPropagation();
+		e.preventDefault();
+
+		var $this = $(this);
+		var $musList = $this.closest('.muslist');
+		var $musItems = $musList.find('.mustoggler');
+		var $playlistItems;
+		var arOfData = [];
+		var id = $this.data('musid');
+		var indexInList = false;
+		var currentPlaying = $this.hasClass('mustoggler_playing');
+		var currentPlayingAndPause = currentPlaying && $this.hasClass('mustoggler_paused');
+
+		//актив класс на кнопке ините музыки
+		$('.mustoggler_playing').removeClass('mustoggler_playing');
+		$this.addClass('mustoggler_playing');
+
+		//сбор массива данных
+		$musItems.each(function () {
+			var $this = $(this);
+			var data = $this.data('musmeta');
+			arOfData.push(data);
+		});
+
+		//добавление трека в лист
+		arOfData.forEach(function (el) {
+			var $playlistItems = $('.jp-playlist-item');
+			var arrIDInPlaylist = [];
+			var canBeAdded = true;
+
+			//сбор имеющихся айди треков
+			$playlistItems.each(function (index, item) {
+				arrIDInPlaylist.push($(item).data('id'));
+			});
+
+			// проверка на уникальность
+			arrIDInPlaylist.forEach(function (id) {
+				if (id == el.id) {
+					canBeAdded = false;
+				}
+			});
+
+			// если уже есть в списке, не добавляем 
+			if (canBeAdded) {
+				myPlaylist.add({
+					title: el.title,
+					artist: el.artist,
+					mp3: el.url,
+					poster: el.img,
+					id: el.id
+				});
+			};
+		});
+
+		$playlistItems = $('.jp-playlist-item');
+		indexInList = $playlistItems.filter('[data-id="' + id + '"]').closest('li').index();
+
+		if (currentPlayingAndPause) {
+
+			myPlaylist.play();
+
+		} else if (currentPlaying) {
+
+			myPlaylist.pause();
+
+		} else {
+
+			myPlaylist.select(indexInList);
+			myPlaylist.play();
+
+		}
+	});
+
+	$('.mustoggler').on('click', 'a, button', function (e) {
+		e.stopPropagation();
+	});
+
+	//
+	// Player end
 	//
 });
