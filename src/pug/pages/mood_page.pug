@@ -41,12 +41,22 @@
 
 					.wrapper-elem.wrapper-song
 						
-						.wrapper-tracklist
-							.track
-								.track-img-box
-									img(src="style/img/tracklist/tracklist-cover-1.jpg", alt="").track-img
+						.wrapper-tracklist.muslist
+							.track.mustoggler(data-musid="track-id-1" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Alicia Keys&quot;,
+											&quot;title&quot; : &quot;Good Job&quot;,
+											&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/4039.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-1.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-1&quot;}`
+								)
+								.track-img-box(style="background-image: url(style/img/tracklist/tracklist-cover-1.jpg)")
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Good Job
 									a(href="").media-link.media-artist Alicia Keys
@@ -58,13 +68,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -77,11 +88,21 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
-								.track-img-box
-									img(src="style/img/tracklist/tracklist-cover-2.jpg", alt="").track-img
+							.track.mustoggler(data-musid="track-id-2" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Intelligency&quot;,
+											&quot;title&quot; : &quot;Renovatio&quot;,
+											&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-2.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-2&quot;}`
+								)
+								.track-img-box(style="background-image: url(style/img/tracklist/tracklist-cover-2.jpg)")
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Renovatio
 									a(href="").media-link.media-artist Intelligency
@@ -93,30 +114,43 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
-									.track-control-item.track-add.active
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
+									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
 										svg(width="18" height="14" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-checkmark-icon
 											path(d="M1 7.52941L5.26638 12.0184L16.6001 1" stroke="#FF7A1B" stroke-width="1.5" stroke-miterlimit="10")
 									.track-control-item.track-duration
-										span.track-duration-value 02:30
+										span.track-duration-value.track__fulltime 02:30
+										span.track-duration-value.track__duration
 										.track-download
 											svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-3" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Клава Кока&quot;,
+											&quot;title&quot; : &quot;Покинула чат&quot;,
+											&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-3.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-3&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-3.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Покинула чат
 									a(href="").media-link.media-artist Клава Кока
@@ -128,13 +162,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -147,11 +182,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-4" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;The Weeknd&quot;,
+											&quot;title&quot; : &quot;After Hours&quot;,
+											&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-4.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-4&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-4.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name After Hours
 									a(href="").media-link.media-artist The Weeknd
@@ -163,13 +209,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -182,11 +229,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-5" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Little Big&quot;,
+											&quot;title&quot; : &quot;UNO&quot;,
+											&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3979.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-5.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-5&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-5.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name UNO
 									a(href="").media-link.media-artist Little Big
@@ -198,13 +256,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -217,11 +276,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-6" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Тайпан, Agunda&quot;,
+											&quot;title&quot; : &quot;Луна не знает пути&quot;,
+											&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3947.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-6.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-6&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-6.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Луна не знает пути
 									a(href="").media-link.media-artist Тайпан, Agunda
@@ -233,13 +303,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -252,11 +323,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-7" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Клава Кока&quot;,
+											&quot;title&quot; : &quot;Покинула чат&quot;,
+											&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-3.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-7&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-3.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Покинула чат
 									a(href="").media-link.media-artist Клава Кока
@@ -268,13 +350,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -287,11 +370,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-8" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;The Weeknd&quot;,
+											&quot;title&quot; : &quot;After Hours&quot;,
+											&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-4.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-8&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-4.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name After Hours
 									a(href="").media-link.media-artist The Weeknd
@@ -303,13 +397,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -322,11 +417,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-9" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Little Big&quot;,
+											&quot;title&quot; : &quot;UNO&quot;,
+											&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3979.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-5.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-9&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-5.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name UNO
 									a(href="").media-link.media-artist Little Big
@@ -338,13 +444,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -357,11 +464,22 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							.track
+							.track.mustoggler(data-musid="track-id-10" 
+									data-musmeta!=`{
+											&quot;artist&quot; : &quot;Тайпан, Agunda&quot;,
+											&quot;title&quot; : &quot;Луна не знает пути&quot;,
+											&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3947.mp3&quot;,
+											&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-6.jpg&quot;,
+											&quot;id&quot; : &quot;track-id-10&quot;}`
+								)
 								.track-img-box
 									img(src="style/img/tracklist/tracklist-cover-6.jpg", alt="").track-img
 									.track-play
-										.track-play-btn
+									.equalizer
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
+										.equalizer-bar
 								.track-info
 									a(href="").media-link.media-name Луна не знает пути
 									a(href="").media-link.media-artist Тайпан, Agunda
@@ -373,13 +491,14 @@
 									.track-control-item.track-share
 										svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 											path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
-										.track-share-dropdown
-											a(href="#").track-share-dropdown-social.vk-link
-											a(href="#").track-share-dropdown-social.tw-link
-											a(href="#").track-share-dropdown-social.fb-link
-											a(href="#").track-share-dropdown-social.od-link
-											a(href="#").track-share-dropdown-copy
-												| Скопировать ссылку
+										.track-share-dropdown-wrap
+											.track-share-dropdown
+												a(href="#").track-share-dropdown-social.vk-link
+												a(href="#").track-share-dropdown-social.tw-link
+												a(href="#").track-share-dropdown-social.fb-link
+												a(href="#").track-share-dropdown-social.od-link
+												a(href="#").track-share-dropdown-copy
+													| Скопировать ссылку
 									.track-control-item.track-add
 										svg(width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon.track-control-add-icon
 											path(d="M7.52322 0V8M7.52322 8L7.52322 16M7.52322 8L0 8M7.52322 8L15 8" stroke="#808080" stroke-width="1.5")
@@ -392,7 +511,7 @@
 												path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M8.06226 0V7.42382V11.8317" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
 												path(d="M0 16.0381H16.0076" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
-							
+				
 					.wrapper-elem
 						button.show-more
 							img(src="style/img/icon/more-icon.svg", alt="").show-more-img 

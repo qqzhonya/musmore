@@ -232,7 +232,8 @@ a
 	border: 1px solid  transparent
 	border-radius: 5px
 	+prefix(transition, $default-transition)
-	
+	cursor: pointer
+
 	&:last-child
 		margin:
 			bottom: 0
@@ -253,6 +254,9 @@ a
 
 		.track-duration-value
 			display: none
+
+		.track-number
+			opacity: 0
 	
 	&-img-box
 		position: relative
@@ -262,6 +266,13 @@ a
 		border-radius: 5px
 		overflow: hidden
 	
+	&-number
+		display: block
+		margin:
+			top: 5px
+			left: 8px
+		text-align: left
+
 	&-play
 		position: absolute
 		top: 0
@@ -278,6 +289,9 @@ a
 			content: ''
 			display: block
 			position: absolute
+			margin:
+				top: -13px
+				left: -13px
 			top: 50%
 			left: 50%
 			width: 26px
@@ -288,7 +302,6 @@ a
 			background-repeat: no-repeat
 			border-radius: 100%	
 			opacity: 0
-			+prefix(transform, translate(-50%, -50%))
 
 		&:before
 			background-image: url(../img/icon/play-btn.svg)
@@ -420,8 +433,6 @@ a
 		+align-items(center)
 
 		&-slider
-			margin:
-				left: 10px
 			width: 88px
 			height: 3px
 			background-color: #C4C4C4
@@ -493,7 +504,7 @@ a
 					right: 5px
 				width: 24px
 				height: 24px
-				border-radius: 100%
+				border-radius: 100px
 				background-size: auto
 				background-position: center center
 				background-repeat: no-repeat
@@ -557,6 +568,9 @@ a
 		
 		.track__duration
 			display: block
+
+		.track-number
+			opacity: 0
 		
 		&:hover
 			.track-play
@@ -580,6 +594,32 @@ a
 				&:before
 					opacity: 1
 
+	&.mustoggler_playing.mustoggler_paused
+		.track-number
+			opacity: 1
+
+	&.album-track
+		margin: 0 -15px
+
+		.track-img-box
+			margin:
+				left: -5px
+			width: 26px
+			height: 26px
+
+		.track-play
+			width: 26px
+			height: 26px
+			background-color: $white-color
+
+		.equalizer
+			&::after
+				display: none
+
+			background-color: $white-color
+			&-bar
+				background-color: $accent-color
+
 .equalizer
 	display: block
 	position: absolute
@@ -592,13 +632,26 @@ a
 	opacity: 0
 	z-index: 1
 
+	&::after
+		content: ''
+		display: block
+		position: absolute
+		top: -100%
+		left: -100%
+		right: -100%
+		bottom: -100%
+		background-color: rgba(0, 0, 0, 0.3)
+		z-index: 0
+
 	&-bar
+		position: relative
 		background: #fff
 		bottom: 0
 		height: 3px
 		position: absolute
 		width: 2px
 		+prefix(animation, sound 0ms -800ms linear infinite alternate)
+		z-index: 1
 
 		&:nth-child(1)
 			left: 0px
@@ -632,12 +685,29 @@ a
 		+align-items(flex-start)
 
 	&-elem 
+		display: block
 		position: relative
 		margin-bottom: 20px
 		padding: 0 7px 0 8px
 		width: 20%
 		max-width: 172px
 		cursor: pointer
+
+		&:not(.mustoggler_playing):hover
+			.media-img-box
+				opacity: $default-opacity
+		
+		&.mustoggler_playing
+			.media-play
+				opacity: 1
+				visibility: visible
+
+				&:after
+					opacity: 1
+
+				&:before
+					opacity: 0
+
 		
 	&-img-box
 		position: relative
@@ -646,6 +716,7 @@ a
 		height: 158px
 		border-radius: 5px
 		overflow: hidden
+		+prefix(transition, $default-transition)
 
 		&:hover
 			.media-play
@@ -677,30 +748,49 @@ a
 		visibility: hidden
 		+prefix(transition, $default-transition)
 
-		&-btn
-			margin: auto
+		&:before,
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			margin:
+				top: -25px
+				left: -25px
+			top: 50%
+			left: 50%
 			width: 50px
 			height: 50px
 			background-color: $accent-color
-			background-image: url(../img/icon/play-btn.svg)
-			background-position: center center
 			background-size: 15px 18px
+			background-position: center center
 			background-repeat: no-repeat
-			border-radius: 100%
+			border-radius: 100%	
+			opacity: 0
+
+		&:before
+			background-image: url(../img/icon/play-btn.svg)
+			opacity: 1
+		
+		&:after
+			background-image: url(../img/icon/pause-icon.svg)
 			
 	&-info
 		margin:
 			top: 10px
 
-	&-link
+	&-link,
+	&-name,
+	&-artist
 		display: block
 		max-width: 300px
-		color: $font-dark-color
 		white-space: nowrap
 		-o-text-overflow: ellipsis
 		text-overflow: ellipsis
-		+prefix(transition, $default-transition)
 		overflow: hidden
+
+	&-link	
+		color: $font-dark-color		
+		+prefix(transition, $default-transition)
 	
 		&:hover
 			color: $accent-color
@@ -725,7 +815,8 @@ a
 		&-play
 			border-radius: 100%
 		
-		&-link
+		&-name,
+		&-artist
 			text-align: center
 
 .tag
@@ -940,30 +1031,69 @@ a
 		+align-items(center)
 		background-color: $accent-color
 		+prefix(transition, $default-transition)
+		cursor: pointer
 
 		&:hover
 			opacity: $default-opacity
 
 		&-btn
 			display: inline-block
+			position: relative
 			width: 22px
 			height: 22px 
 			background-color: #151515
-			background-image: url(../img/icon/play-white-btn.svg)
 			background-size: auto
 			background-position: center center
 			background-repeat: no-repeat
 			border-radius: 100% 
+
+			&:before,
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				margin:
+					top: -4px
+					left: -5px
+				top: 50%
+				left: 50%
+				width: 10px
+				height: 8px
+				background-size: auto
+				background-position: center center
+				background-repeat: no-repeat
+				opacity: 0
+
+			&:before
+				background-image: url(../img/icon/play-white-btn.svg)
+				opacity: 1
+
+			&:after
+				background-image: url(../img/icon/pause-white-icon.svg)
 		
 		&-text
 			margin:
 				top: 2px
 				left: 6px
 			color: $font-dark-color
-	
-	&-play.active
-		.header-info-play-btn
-			background-image: url(../img/icon/pause-white-icon.svg)
+
+		
+		&.mustoggler_playing
+			.header-info-play-btn
+				&:before
+					opacity: 0
+				
+				&:after
+					opacity: 1
+		
+		&.mustoggler_playing.mustoggler_paused
+			.header-info-play-btn
+				&:before
+					opacity: 1
+				
+				&:after
+					opacity: 0
+			
 
 	.track-like
 		+flex

@@ -80,15 +80,6 @@ $(function() {
 	//
 
 	//
-	// Header info play button 
-	//
-
-	$('.header-info-play').click(function() {
-		event.preventDefault();
-		$(this).toggleClass('active');
-	});
-
-	//
 	// Add active on add song btn
 	//
 

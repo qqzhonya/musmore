@@ -13,6 +13,7 @@
 		border-bottom: $border-param
 		+justify-content(space-between)
 		+align-items(center)
+		cursor: pointer
 
 		&:first-child
 			padding-top: 0
@@ -23,49 +24,75 @@
 		.media-link
 			max-width: 220px
 
-		&-btn
-			+flex
+		&-btn-box
+			position: relative
 			width: 30px
 			height: 30px
 			border: 1px solid #151515
-			border-radius: 100%
+			border-radius: 100px
 			cursor: pointer
 			+prefix(transition, $default-transition)
+			overflow: hidden
 
-			&:hover
-				border-color: $accent-color
+		&-btn
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			border-radius: 100px
 
-				.sidebar-track-btn-icon
-					path 
-						fill: $accent-color
+			&:before,
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				margin:
+					top: -13px
+					left: -13px
+				top: 50%
+				left: 50%
+				width: 26px
+				height: 26px
+				background-size: 10px 12px
+				background-position: center center
+				background-repeat: no-repeat
+				border-radius: 100%	
+				opacity: 0
 
-			&-icon
-				margin: auto
+			&:before
+				background-image: url(../img/icon/play-btn.svg)
+				opacity: 1
+			
+			&:after
+				background-image: url(../img/icon/pause-orange-icon.svg)
 
-				path
-					+prefix(transition, $default-transition)
-
-		&-play
-			width: 9px 
-			height: 12px
-		
-		&-pause
-			display: none
+		&:hover
+			.sidebar-track-btn-box
+				+prefix(transform, scale(1.05))
 	
-	&-track.active
+		&.mustoggler_playing
+			.sidebar-track-btn
+				&:after
+					opacity: 1
+
+				&:before
+					opacity: 0
+				
+			.sidebar-track-btn-box
+				border-color: $accent-color
 		
-		.sidebar-track-btn
-			border-color: $accent-color
+		&.mustoggler_playing.mustoggler_paused
+			.sidebar-track-btn
+				&:after
+					opacity: 1
 
-		.sidebar-track-play
-			display: none
-		
-		.sidebar-track-pause
-			display: block
-
-			path
-				fill: $accent-color
-
+				&:before
+					opacity: 0
+				
+			.sidebar-track-btn-box
+				border-color: $accent-color
+			
 
 	&-more-btn
 		display: inline-block

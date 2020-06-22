@@ -1,4 +1,4 @@
-.wrapper-sidebar
+aside.wrapper-sidebar
 	.sidebar-elem
 		.sidebar-heading Топ жанры
 		.tag
@@ -15,93 +15,117 @@
 	.sidebar-elem
 		.sidebar-heading Топ 10 треков
 		
-		.sidebar-track-wrap
-			.sidebar-track.active
+		.sidebar-track-wrap.muslist
+			.sidebar-track.mustoggler(data-musid="track-id-111" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Alicia Keys&quot;,
+							&quot;title&quot; : &quot;Good Job&quot;,
+							&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/4039.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-1.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-111&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Новый Рассвет
 					a(href="").media-link.media-artist Anivar
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-112" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Intelligency&quot;,
+							&quot;title&quot; : &quot;Renovatio&quot;,
+							&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-2.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-112&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name After Hours
 					a(href="").media-link.media-artist The Weeknd
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-113" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Клава Кока&quot;,
+							&quot;title&quot; : &quot;Покинула чат&quot;,
+							&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-3.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-113&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Новый Рассвет
 					a(href="").media-link.media-artist Anivar
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-114" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;The Weeknd&quot;,
+							&quot;title&quot; : &quot;After Hours&quot;,
+							&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3979.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-4.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-114&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Луна не знает пути
 					a(href="").media-link.media-artist Тайпан, Agunda
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
+				.sidebar-track-btn-box
+					.sidebar-track-btn
 
 		a(href="").sidebar-more-btn + Показать еще
 
 	.sidebar-elem
 		.sidebar-heading Свежие поступления
 		
-		.sidebar-track-wrap
-			.sidebar-track
+		.sidebar-track-wrap.muslist
+			.sidebar-track.mustoggler(data-musid="track-id-221" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Alicia Keys&quot;,
+							&quot;title&quot; : &quot;Good Job&quot;,
+							&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/4039.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-1.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-221&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Новый Рассвет
 					a(href="").media-link.media-artist Anivar
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-222" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Intelligency&quot;,
+							&quot;title&quot; : &quot;Renovatio&quot;,
+							&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-2.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-222&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name After Hours
 					a(href="").media-link.media-artist The Weeknd
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-223" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;Клава Кока&quot;,
+							&quot;title&quot; : &quot;Покинула чат&quot;,
+							&quot;url&quot; : &quot;http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-3.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-223&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Новый Рассвет
 					a(href="").media-link.media-artist Anivar
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-			.sidebar-track
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+			.sidebar-track.mustoggler(data-musid="track-id-224" 
+					data-musmeta!=`{
+							&quot;artist&quot; : &quot;The Weeknd&quot;,
+							&quot;title&quot; : &quot;After Hours&quot;,
+							&quot;url&quot; : &quot;https://dl1.ru-music.xn--41a.ws/mp3/3979.mp3&quot;,
+							&quot;img&quot; : &quot;style/img/tracklist/tracklist-cover-4.jpg&quot;,
+							&quot;id&quot; : &quot;track-id-224&quot;}`
+				)
 				.meida-info
 					a(href="").media-link.media-name Луна не знает пути
 					a(href="").media-link.media-artist Тайпан, Agunda
-				.sidebar-track-btn
-					svg(width="13" height="17" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-play
-						path(d="M12.3539 8.88317L0.89512 16.9691L0.895121 0.797291L12.3539 8.88317Z" fill="#151515")
-					svg(width="8" height="10" viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg").sidebar-track-btn-icon.sidebar-track-pause
-						path(d="M3 0H0V10H3V0Z" fill="#151515")
-						path(d="M8 0H5V10H8V0Z" fill="#151515")
-		
+				.sidebar-track-btn-box
+					.sidebar-track-btn
+
 		a(href="").sidebar-more-btn + Показать еще
