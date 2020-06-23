@@ -81,6 +81,9 @@ a
 		min-height: 100%
 		+flex-direction(column)
 
+	&-tracklist
+		margin: 0 -10px
+
 	&-elements
 		margin:
 			bottom: 100px
@@ -163,7 +166,7 @@ a
 			position: relative
 			margin:
 				right: -1px
-			padding: 10px 15px
+			padding: 8px 15px
 			font-size: 14px
 			line-height: 14px
 			font-weight: 500
@@ -190,28 +193,6 @@ a
 			border-color: $accent-color	
 			z-index: 2
 
-	&-text
-		&-elem
-			margin: 
-				bottom: 15px
-			font-size: 16px
-			line-height: 32px 
-			font-weight: 500
-			color: $font-dark-color 
-
-		&-title
-			margin:
-				top: 35px
-				bottom: 15px
-			font-size: 22px
-			line-height: 32px
-		
-		&-link
-			color: #0054B9
-
-			&:hover
-				text-decoration: underline
-
 .wrapper.main-page
 	padding: 
 		top: 30px
@@ -225,7 +206,6 @@ a
 .track
 	+flex
 	position: relative
-	margin: 0 -10px
 	padding: 8px 10px
 	max-width: 100%
 	+align-items(center)
@@ -252,7 +232,7 @@ a
 		.track-like
 			+flex
 
-		.track-duration-value
+		.track__time
 			display: none
 
 		.track-number
@@ -298,17 +278,18 @@ a
 			height: 26px
 			background-color: $accent-color
 			background-size: 10px 12px
-			background-position: center center
 			background-repeat: no-repeat
 			border-radius: 100%	
 			opacity: 0
 
 		&:before
 			background-image: url(../img/icon/play-btn.svg)
+			background-position: 9px 7px
 			opacity: 1
 		
 		&:after
 			background-image: url(../img/icon/pause-icon.svg)
+			background-position: 8px 7px
 		
 	&-info
 		margin:
@@ -407,7 +388,10 @@ a
 		font-size: 14px
 		color: $font-light-color
 		text-align: center
-		
+	
+	&__duration
+		display: none
+
 	&-download
 		margin: 0 auto
 		width: 16px
@@ -688,10 +672,14 @@ a
 		display: block
 		position: relative
 		margin-bottom: 20px
-		padding: 0 7px 0 8px
+		margin-right: 11px
 		width: 20%
-		max-width: 172px
+		min-width: 158px
+		max-width: 158px
 		cursor: pointer
+
+		&:last-child
+			margin-right: 0
 
 		&:not(.mustoggler_playing):hover
 			.media-img-box
@@ -707,7 +695,6 @@ a
 
 				&:before
 					opacity: 0
-
 		
 	&-img-box
 		position: relative
@@ -829,7 +816,7 @@ a
 		margin:
 			right: 9px
 			bottom: 9px
-		padding: 7px 10px 8px 10px
+		padding: 8px 10px 7px 10px
 		font-size: 14px
 		line-height: 14px
 		color: $font-dark-color
@@ -877,11 +864,15 @@ a
 	&-artist
 		.header-info-img-box
 			border-radius: 100%
+		
+		.header-info-wrap
+			margin:
+				top: 30px
 
 	&-genre
 		font-size: 16px
 		line-height: 28px
-		color: $font-dark-color
+		color: $font-light-color
 		+prefix(transition, $default-transition)
 
 		&:hover
@@ -1002,7 +993,7 @@ a
 			background-repeat: no-repeat
 
 	&-select
-		padding: 12px 15px
+		padding: 14px 15px 10px 15px
 		min-width: 190px
 		font-size: 14px
 		line-height: 14px
@@ -1060,21 +1051,23 @@ a
 				width: 10px
 				height: 8px
 				background-size: auto
-				background-position: center center
 				background-repeat: no-repeat
 				opacity: 0
 
 			&:before
 				background-image: url(../img/icon/play-white-btn.svg)
+				background-position: 3px -1px
 				opacity: 1
 
 			&:after
 				background-image: url(../img/icon/pause-white-icon.svg)
+				background-position: 1px -1px
 		
 		&-text
 			margin:
 				top: 2px
 				left: 6px
+			font-size: 14px
 			color: $font-dark-color
 
 		
@@ -1094,7 +1087,6 @@ a
 				&:after
 					opacity: 0
 			
-
 	.track-like
 		+flex
 		margin:
@@ -1244,6 +1236,7 @@ a
 
 	.second-tab
 		border: 0
+		padding: 0
 
 		.second-tab-elem
 			color: rgba(255, 255, 255, .8)
@@ -1621,11 +1614,16 @@ a
 
 		&-item
 			+flex
+			margin:
+				bottom: 13px
 			font-size: 14px
 			font-weight: 500
 			color: $font-dark-color
-			line-height: 38px
+			line-height: normal
 			+align-items(center)
+
+			&:last-child
+				margin: 0
 
 			&:hover
 				text-decoration: underline

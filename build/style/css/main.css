@@ -69,6 +69,8 @@ a {
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
+  .wrapper-tracklist {
+    margin: 0 -10px; }
   .wrapper-elements {
     margin-bottom: 100px;
     flex: 1 0 auto; }
@@ -153,7 +155,7 @@ a {
       display: inline-block;
       position: relative;
       margin-right: -1px;
-      padding: 10px 15px;
+      padding: 8px 15px;
       font-size: 14px;
       line-height: 14px;
       font-weight: 500;
@@ -179,21 +181,6 @@ a {
       color: #FF7A1B;
       border-color: #FF7A1B;
       z-index: 2; }
-  .wrapper-text-elem {
-    margin-bottom: 15px;
-    font-size: 16px;
-    line-height: 32px;
-    font-weight: 500;
-    color: #151515; }
-  .wrapper-text-title {
-    margin-top: 35px;
-    margin-bottom: 15px;
-    font-size: 22px;
-    line-height: 32px; }
-  .wrapper-text-link {
-    color: #0054B9; }
-    .wrapper-text-link:hover {
-      text-decoration: underline; }
 
 .wrapper.main-page {
   padding-top: 30px;
@@ -209,7 +196,6 @@ a {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 0 -10px;
   padding: 8px 10px;
   max-width: 100%;
   -webkit-box-align: center;
@@ -241,7 +227,7 @@ a {
       display: -moz-flex;
       display: -ms-flexbox;
       display: flex; }
-    .track:hover .track-duration-value {
+    .track:hover .track__time {
       display: none; }
     .track:hover .track-number {
       opacity: 0; }
@@ -283,15 +269,16 @@ a {
       height: 26px;
       background-color: #FF7A1B;
       background-size: 10px 12px;
-      background-position: center center;
       background-repeat: no-repeat;
       border-radius: 100%;
       opacity: 0; }
     .track-play:before {
       background-image: url(../img/icon/play-btn.svg);
+      background-position: 9px 7px;
       opacity: 1; }
     .track-play:after {
-      background-image: url(../img/icon/pause-icon.svg); }
+      background-image: url(../img/icon/pause-icon.svg);
+      background-position: 8px 7px; }
   .track-info {
     margin-top: 0;
     margin-left: 13px; }
@@ -369,6 +356,8 @@ a {
     font-size: 14px;
     color: #808080;
     text-align: center; }
+  .track__duration {
+    display: none; }
   .track-download {
     margin: 0 auto;
     width: 16px;
@@ -670,10 +659,13 @@ a {
   display: block;
   position: relative;
   margin-bottom: 20px;
-  padding: 0 7px 0 8px;
+  margin-right: 11px;
   width: 20%;
-  max-width: 172px;
+  min-width: 158px;
+  max-width: 158px;
   cursor: pointer; }
+  .media-elem:last-child {
+    margin-right: 0; }
   .media-elem:not(.mustoggler_playing):hover .media-img-box {
     opacity: 0.8; }
   .media-elem.mustoggler_playing .media-play {
@@ -814,7 +806,7 @@ a {
     display: block;
     margin-right: 9px;
     margin-bottom: 9px;
-    padding: 7px 10px 8px 10px;
+    padding: 8px 10px 7px 10px;
     font-size: 14px;
     line-height: 14px;
     color: #151515;
@@ -863,10 +855,12 @@ a {
     object-fit: cover; }
   .header-info-artist .header-info-img-box {
     border-radius: 100%; }
+  .header-info-artist .header-info-wrap {
+    margin-top: 30px; }
   .header-info-genre {
     font-size: 16px;
     line-height: 28px;
-    color: #151515;
+    color: #808080;
     -webkit-transition: 0.35s;
     -moz-transition: 0.35s;
     -ms-transition: 0.35s;
@@ -974,7 +968,7 @@ a {
       background-position: center center;
       background-repeat: no-repeat; }
   .header-info-select {
-    padding: 12px 15px;
+    padding: 14px 15px 10px 15px;
     min-width: 190px;
     font-size: 14px;
     line-height: 14px;
@@ -1038,17 +1032,19 @@ a {
         width: 10px;
         height: 8px;
         background-size: auto;
-        background-position: center center;
         background-repeat: no-repeat;
         opacity: 0; }
       .header-info-play-btn:before {
         background-image: url(../img/icon/play-white-btn.svg);
+        background-position: 3px -1px;
         opacity: 1; }
       .header-info-play-btn:after {
-        background-image: url(../img/icon/pause-white-icon.svg); }
+        background-image: url(../img/icon/pause-white-icon.svg);
+        background-position: 1px -1px; }
     .header-info-play-text {
       margin-top: 2px;
       margin-left: 6px;
+      font-size: 14px;
       color: #151515; }
     .header-info-play.mustoggler_playing .header-info-play-btn:before {
       opacity: 0; }
@@ -1229,7 +1225,8 @@ a {
     font-size: 35px;
     line-height: 35px; }
   .ganre-heading .second-tab {
-    border: 0; }
+    border: 0;
+    padding: 0; }
     .ganre-heading .second-tab .second-tab-elem {
       color: rgba(255, 255, 255, 0.8); }
       .ganre-heading .second-tab .second-tab-elem::after {
@@ -1667,15 +1664,18 @@ a {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 13px;
     font-size: 14px;
     font-weight: 500;
     color: #151515;
-    line-height: 38px;
+    line-height: normal;
     -webkit-box-align: center;
     -ms-flex-align: center;
     -webkit-align-items: center;
     -moz-align-items: center;
     align-items: center; }
+    .social-login-more-item:last-child {
+      margin: 0; }
     .social-login-more-item:hover {
       text-decoration: underline; }
   .social-login-more-item.social-more-inst .social-login-more-img {
@@ -2007,7 +2007,10 @@ a {
   margin-bottom: 30px; }
 
 .sidebar-heading {
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px; }
 
 .sidebar-track {
   display: -webkit-box;
@@ -2832,3 +2835,37 @@ a {
   border: 0; }
   .cabinet-page .header-info .username-change-submit:hover {
     color: #FF7A1B; }
+
+.wrapper-text h1 {
+  font-size: 35px;
+  font-weight: 700; }
+
+.wrapper-text h2,
+.wrapper-text h3,
+.wrapper-text h4,
+.wrapper-text h5 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  line-height: 32px; }
+
+.wrapper-text p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #151515; }
+
+.wrapper-text a {
+  color: #0054B9; }
+  .wrapper-text a:hover {
+    text-decoration: underline; }
+
+.wrapper-text ul,
+.wrapper-text ol {
+  padding: 5px 0;
+  list-style-position: inside; }
+  .wrapper-text ul li,
+  .wrapper-text ol li {
+    font-size: 16px;
+    line-height: 32px; }
