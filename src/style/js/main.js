@@ -24,7 +24,28 @@ $(function() {
 		items: 5,
 		loop: false,
 		margin: 15,
-		nav: true
+		nav: false,
+		responsiveClass: true,
+		responsive: {
+			0: {
+				margin: 10,
+				items: 1,
+				stagePadding: 47
+			},
+			350: {
+				items: 2
+			},
+			475: {
+				items: 3
+			},
+			764: {
+				items: 4
+			},
+			1100: {
+				nav: true,
+				item: 5
+			}
+		}
 	});
 
 	//
@@ -211,6 +232,21 @@ $(function() {
 	//
 
 	//
+	// Share dropdown mob
+	//
+
+	if($(window).width() <= 920) {
+		$('.track-share').click(function() {
+			$(this).find('.track-share-dropdown-wrap').toggleClass('active');
+			console.log("hi")
+		});
+	}
+
+	//
+	// Share dropdown mob end
+	//
+
+	//
 	// Player
 	//
 
@@ -275,18 +311,6 @@ $(function() {
 			}
 		});
 
-	$(".jp-volume-bar").slider({
-		range: "min",
-		min: 0,
-		max: 100,
-		value: savedVolume,
-
-		slide: function (event, ui) {
-			setPlayerVolume(ui.value);
-			saveVolume(ui.value);
-		}
-	});
-
 	$(".jp-track-durbar").slider({
 		range: "min",
 		min: 0,
@@ -317,8 +341,10 @@ $(function() {
 	function setPlayerVolume(vol) {
 		var $volBtn = $('.jp-volume-ico');
 
-		(vol > 0) ? $volBtn.removeClass('muted'): $volBtn.addClass('muted');
-
+		if($(window).width > 920) {
+			(vol > 0) ? $volBtn.removeClass('muted'): $volBtn.addClass('muted');
+		}
+		
 		$myPlayer.jPlayer("volume", vol / 100);
 	};
 
@@ -330,26 +356,58 @@ $(function() {
 		return localStorage.volume;
 	};
 
-	$('.jp-volume-ico').on('click', function () {
-		var $this = $(this);
-		var isMuted = $this.hasClass('muted');
+	if($(window).width() > 920) {
+		$('.jp-volume-ico').on('click', function () {
+			var $this = $(this);
+			var isMuted = $this.hasClass('muted');
+	
+			if (isMuted) {
+	
+				$(".jp-volume-bar").slider("value", tmpVolume);
+				setPlayerVolume(tmpVolume);
+				saveVolume(tmpVolume)
+	
+			} else {
+	
+				tmpVolume = getCurrentVolume();
+	
+				$(".jp-volume-bar").slider("value", 0);
+				setPlayerVolume(0);
+				saveVolume(0);
+	
+			};
+		});
 
-		if (isMuted) {
+		$(".jp-volume-bar").slider({
+			range: "min",
+			min: 0,
+			max: 100,
+			value: savedVolume,
+	
+			slide: function (event, ui) {
+				setPlayerVolume(ui.value);
+				saveVolume(ui.value);
+			}
+		});
+	} else {
+		$(".jp-volume-bar").slider({
+			orientation: "vertical",
+			range: "min",
+			min: 0,
+			max: 100,
+			value: savedVolume,
+	
+			slide: function (event, ui) {
+				setPlayerVolume(ui.value);
+				saveVolume(ui.value);
+			}
+		});
 
-			$(".jp-volume-bar").slider("value", tmpVolume);
-			setPlayerVolume(tmpVolume);
-			saveVolume(tmpVolume)
-
-		} else {
-
-			tmpVolume = getCurrentVolume();
-
-			$(".jp-volume-bar").slider("value", 0);
-			setPlayerVolume(0);
-			saveVolume(0);
-
-		};
-	});
+		$('.jp-volume-ico').on('click', function() {
+			$('.track-volume-wrapper').toggleClass('active');
+		})
+	}
+	
 
 	$('.mustoggler').on('click', function (e) {
 		e.stopPropagation();

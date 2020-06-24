@@ -1,0 +1,736 @@
+@media screen and (max-width: 1110px)
+	.top-line
+		padding:
+			bottom: 0
+		height: auto
+		+justify-content(flex-start)
+		+flex-wrap(wrap)
+		
+		&_elem
+			order: 1
+
+		&_nav-wrap
+			margin:
+				top: 5px
+			width: 100%
+			order: 3
+
+		&_nav
+			&-link
+				line-height: 35px
+		
+		&_buttons
+			margin: 0 0 0 auto
+			min-width: 121px
+	
+	.media
+		&-elem
+			width: 25%
+
+@media screen and (max-width: 1010px)
+	.header-info
+		&-img-box
+			padding:
+				bottom: 34.4%
+			width: 34.4%
+		
+		&-wrap
+			width: 65.6%
+
+	.wrapper-sidebar
+		padding:
+			left: 15px
+		max-width: 260px	
+
+	.footer
+		+flex-wrap(wrap)
+		&-elem
+			margin: 
+				bottom: 14px
+			line-height: 14px
+			
+		&-copyright
+			margin:
+				right: 0
+			width: 100%
+
+@media screen and (max-width: 975px)
+	.header-info-mood
+		+flex-wrap(wrap)
+		
+		.header-info-name
+			width: 100%
+			
+		.header-info-select-wrap
+			margin: 0
+				top: 15px
+	
+	.track
+		&.mustoggler_playing
+			.track-play
+				opacity: 1
+				visibility: visible
+
+				&:after,
+				&:before
+					opacity: 0
+			
+			.equalizer
+				opacity: 1
+
+			&:hover
+				.track-play
+					&:after,
+					&:before
+						opacity: 0
+					
+				.equalizer
+					opacity: 1
+
+			
+			&.mustoggler_paused
+				.equalizer
+					opacity: 1
+				
+				.track-play
+					opacity: 1
+					visibility: visible
+					&:after,
+					&:before
+						opacity: 0
+				
+				&:hover
+					.equalizer
+						opacity: 1
+					
+					.track-play
+						&:after,
+						&:before
+							opacity: 0
+
+@media screen and (max-width: 950px)
+	.header-info
+		+flex-wrap(wrap)
+
+		&-wrap
+			margin:
+				top: 30px
+				left: 0
+			width: 100%
+		
+		&-list
+			max-width: 100%
+	
+	.header-info-artist
+		+justify-content(center)
+
+		.header-info-wrap
+			text-align: center
+		
+		.header-info-name,
+		.header-info-email,
+		.header-info-btn
+			margin:
+				left: 0
+	
+	.cabinet-page
+		.header-info
+			&-wrap
+				margin:
+					left: 0
+
+			.username-change
+				&-form
+					margin: 0 auto
+						bottom: 15px
+					padding:
+						bottom: 20px
+					+flex-wrap(wrap)
+					+justify-content(center)
+
+				&-input
+					padding:
+						bottom: 10px
+					max-width: 100%
+					text-align: center
+
+				&-submit
+					margin:
+						top: -3px
+					padding: 0
+						left: 18px
+
+@media screen and (min-width: 920px)
+	.track
+		&-share
+			&:hover
+				.track-share-dropdown-wrap
+					display: block
+
+@media screen and (max-width: 920px)
+	.p
+		&.p-fixed
+			height: 122px
+
+		&-wrapper
+			margin:
+				top: 20px
+			padding: 0 15px
+			+flex-wrap(wrap)		
+		
+		&-control
+			margin: 0
+			width: 50%
+			order: 1
+
+			&-play
+				margin: 0 25px
+		
+		&-track-control-r
+			margin: 0
+			width: 50%
+		
+		&-song
+			margin: 0
+				top: 10px
+			order: 3
+			width: 50%
+		
+		.track-control-item
+			margin:
+				right: 15px
+		
+		.track-volume
+			margin: 0
+			
+		&-track-control
+			margin: 0
+			order: 4
+			width: 50%
+			+justify-content(flex-end)
+
+			.track-add,
+			.track-download
+				display: none
+
+			.track-share
+				margin: 0
+			
+			&.p-track-control-r
+				margin:
+					top: 3px
+				order: 2
+
+		.track-share-dropdown
+			left: -15px
+
+			&:before
+				left: auto
+				right: 6px
+
+	.fixed-player .jp-volume-ico
+		margin: 0
+			top: -3px
+
+	.track-volume
+		position: relative
+
+		&-wrapper
+			display: none
+			position: absolute
+			padding: 15px
+			top: -90px
+			left: -50px
+			width: 120px
+			height: 35px
+			background-color: $white-color
+			+prefix(transform, rotate(-90deg))
+			border: $border-param
+			border-radius: 5px
+			+box-shadow(0px 6px 20px rgba(0, 0, 0, 0.1))
+
+			&.active 
+				display: block !important
+
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				margin:
+					left: -5px
+					bottom: -4px
+				bottom: 50%
+				left: 0
+				width: 8px
+				height: 8px
+				background-color: $white-color
+				border-top: $border-param
+				border-left: $border-param
+				+prefix(transform, rotate(-45deg))
+
+	.track-share-dropdown
+		padding: 15px
+		width: auto
+		min-width: auto
+		max-width: 100%
+		+flex-flow(column)
+			
+	.track-share-dropdown-social
+		margin:
+			right: 0
+			bottom: 10px
+
+	.track-share-dropdown-copy
+		margin: 0
+		padding: 0
+		width: 22px
+		height: 11px
+		font-size: 0
+
+@media screen and (max-width: 900px)
+	.media
+		&-elem
+			width: 33.33%
+
+@media screen and (max-width: 764px)
+	.top-line
+		padding: 15px
+			bottom: 0
+
+	.main-wrapper
+		margin: 0
+
+	.wrapper
+		padding: 0 15px
+			bottom: 102px
+
+		&-box
+			+flex-wrap(wrap)
+		
+		&-content
+			padding:
+				right: 0
+			max-width: 100%
+		
+		&-elements
+			margin:
+				bottom: 0
+
+		&-elem
+			margin:
+				bottom: 30px
+
+		&-sidebar
+			padding:
+				top: 35px
+				left: 0
+			max-width: 100%
+			border: 0
+	
+	.wrapper.main-page
+		.wrapper-sidebar
+			padding:
+				top: 35px
+
+	.header-info
+		+flex-wrap(nowrap)
+
+		&-img-box
+			padding:
+				bottom: 24.4%
+			width: 24.4%
+
+		&-wrap
+			margin:
+				top: 0
+				left: 20px
+			width: 75.6%
+
+	.cabinet-page
+		.header-info
+			+flex-wrap(wrap)
+
+	.header-info-single
+		margin:
+			bottom: 20px
+
+	.second-tab
+		margin: 0 -15px
+			bottom: 30px
+		padding: 0 15px
+
+	.track.album-track
+		margin: 0
+			bottom: 20px
+
+	.sidebar-more-btn
+		display: block
+		text-align: center
+
+	.ganre-page
+		margin:
+			top: 25px
+	
+	.ganre-heading
+		margin: -30px -15px 25px -15px
+		min-height: 241px
+		max-height: 100%
+
+		&-info
+			padding: 30px 15px 0 15px
+			min-height: 241px
+		
+		.second-tab
+			padding: 0 15px
+
+		&-tag
+		
+			padding: 35px 15px
+			top: 0
+			left: 0
+			height: auto
+			min-height: auto
+			max-height: 100%
+			border: $border-param
+
+			.tag
+				position: relative
+				height: 100%
+
+	.media
+		&-elem
+			width: 25%
+
+	.footer
+		display: none
+	
+	.footer-mob
+		+flex
+		margin:
+			top: 50px
+		padding:
+			bottom: 20px
+		+flex-wrap(wrap)
+
+		.footer
+			&-elem
+				margin: 
+					bottom: 14px
+				line-height: 14px
+				
+			&-copyright
+				margin:
+					right: 0
+				width: 100%
+
+@media screen and (max-width: 650px)
+	.header-info-mood
+		+flex-wrap(wrap)
+		
+		.header-info-name
+			width: 100%
+			
+		.header-info-select-wrap
+			margin: 0
+				top: 15px
+			width: 100%
+
+		.header-info-select
+			width: 100%
+
+@media screen and (min-width: 600px)
+	.track
+		&:hover
+			border-color: $accent-color
+		
+			.track-play
+				opacity: 1
+				visibility: visible	
+			
+			.track-share,
+			.track-download
+				display: block
+			
+			.track-like
+				+flex
+
+			.track__time
+				display: none
+
+			.track-number
+				opacity: 0
+
+@media screen and (max-width: 600px)
+	.top-line
+		border: 0
+
+		&_elem.search
+			margin: 0
+				top: 10px
+			width: 100%
+			max-width: 100%
+			order: 2
+		
+		&_nav-wrap
+			margin:
+				top: 12px
+
+		&_nav
+			&-list
+				+flex-wrap(wrap)
+
+			&-link
+				margin:
+					bottom: 10px
+				padding:
+					bottom: 3px
+				line-height: normal
+	
+	.wrapper
+		&-heading
+			margin:
+				bottom: 20px
+
+		&-content
+			padding:
+				top: 20px
+
+		&-tracklist
+			margin: 0
+
+	.header-info
+		+flex-wrap(wrap)
+
+		&-img-box
+			padding:
+				bottom: 200px
+			width: 200px
+		
+		&-wrap
+			margin:
+				top: 15px
+				left: 0px
+			width: 100%
+		
+		&-list
+			margin:
+				top: 10px
+			+justify-content(flex-start)
+			+flex-wrap(wrap)
+
+			&-elem 
+				margin: 0
+
+				&:nth-child(1),
+				&:nth-child(3),
+				&:nth-child(5),
+				&:nth-child(6)
+					width: 100%	
+					max-width: 100%
+
+				&:nth-child(2),
+				&:nth-child(4)
+					width: auto
+					max-width: 100%
+
+				&:nth-child(1)
+					order: 1
+				
+				&:nth-child(3)
+					order: 2
+				
+				&:nth-child(5)
+					order: 3
+
+				&:nth-child(2)
+					margin:
+						right: 15px
+					order: 4
+				
+				&:nth-child(4)
+					order: 5
+				
+				&:nth-child(6)
+					order: 6
+
+		&-album-list
+			.header-info-list-elem
+				&:nth-child(1)
+					order: 1
+				
+				&:nth-child(2)
+					width: 100%
+					max-width: 100%
+					order: 2
+				
+				&:nth-child(4)
+					margin:
+						right: 15px
+					order: 3
+				
+				&:nth-child(3)
+					width: auto
+					max-width: 100%
+					order: 4
+				
+				&:nth-child(5)
+					order: 5
+
+	.main-slider
+		margin:
+			bottom: 25px
+
+	.main-form
+		&-link
+			margin:
+				left: 15px
+		
+		&-btn-wrap
+			margin:
+				top: 10px
+
+	.social-login
+		&-title
+			margin:
+				top: 30px
+
+		&-item
+			margin:
+				right: 4px
+	
+	.wrapper-tab
+		margin:
+			bottom: 10px
+
+		&-elem
+			margin: 0
+				right: 10px
+				bottom: 10px
+			border-radius: 5px
+
+			&:last-child
+				margin:
+					right: 0
+
+			&:first-child,
+			&:last-child
+				border-radius: 5px
+
+	.track
+		margin:
+			bottom: 10px
+		padding: 0
+
+		&__time
+			display: none
+		
+		&-duration
+			min-width: auto
+			width: auto
+
+		&-download
+			display: block
+
+	.wrapper-text
+		p
+			line-height: 28px
+
+	.cabinet-page
+		.second-tab
+			border: 0
+			
+			&-elem
+				margin:
+					bottom: 10px
+				padding:
+					bottom: 5px
+
+@media screen and (max-width: 530px)
+	.media
+		&-elem
+			width: 33.33%
+
+@media screen and (max-width: 475px)
+	
+	.wrapper-album,
+	.wrapper-artist,
+	.wrapper-compilation
+		margin:
+			right: -15px
+	
+	.wrapper-heading-link
+		display: none
+
+	.media
+		&-wrapper
+			overflow-y: scroll
+			-ms-overflow-style: none
+
+			&::-webkit-scrollbar
+				display: none
+
+		&-elem-wrap
+			margin: 0 -5px
+			min-width: 100%
+			+flex-wrap(nowrap)
+
+		&-elem 
+			padding: 0 5px
+			min-width: 168px
+		
+		&-view-more
+			+flex
+	
+	.wrapper-allartist,
+	.wrapper-popularalbum,
+	.wrapper-allcompilation
+		margin: 0 
+			bottom: 30px
+
+		.media 
+			&-wrapper
+				overflow: hidden
+
+			&-elem-wrap 
+				min-width: auto
+				+flex-wrap(wrap)
+			
+			&-elem
+				min-width: auto
+				width: 50%
+
+@media screen and (max-width: 420px)
+	.header-info
+		&-control
+			+flex-wrap(wrap)
+
+		&-play-wrap
+			margin:
+				bottom: 10px
+			width: 100%
+			order: 1
+
+		.track-like
+			order: 2
+		
+		.track-download
+			order: 3
+		
+		.track-add
+			margin:
+				right: 9px
+			order: 4
+		
+		.track-share
+			margin: 0
+			order: 5
+			
+	
+@media screen and (max-width: 350px)
+	.main-slider
+		margin:
+			right: -15px
+	
+		.owl-stage-outer
+			margin:
+				right: -15px

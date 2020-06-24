@@ -11,7 +11,7 @@
 							img(src="style/img/album/album-cover-1.jpg", alt="").header-info-img
 						.header-info-wrap
 							h1.header-info-name What Kinda Music
-							.header-info-list
+							.header-info-list.header-info-album-list
 								.header-info-list-elem.header-info-album-artist
 									span.header-info-list-name Исполнитель:
 									span.header-info-list-value 
@@ -26,9 +26,8 @@
 									span.header-info-list-name Длительность:
 									span.header-info-list-value 63 мин.
 								.header-info-list-elem
-									.header-info-list-elem
-										span.header-info-list-name Формат:
-										span.header-info-list-value MP3
+									span.header-info-list-name Формат:
+									span.header-info-list-value MP3
 								.header-info-list-elem
 									span.header-info-list-name Кол-во треков:
 									span.header-info-list-value 12
@@ -659,62 +658,68 @@
 									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Романы. Часть 2
-									a(href="").media-link.media-artist Филипп Киркоров
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Парабола
-									a(href="").media-link.media-artist Мот
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Самоизоляция 
-									a(href="").media-link.media-artist Sobol
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
+							.media-elem-wrap
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Причины
+										a(href="").media-link.media-artist Ольга Серябкина
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Апрель
+										a(href="").media-link.media-artist Митя Фомин
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Романы. Часть 2
+										a(href="").media-link.media-artist Филипп Киркоров
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Парабола
+										a(href="").media-link.media-artist Мот
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Самоизоляция 
+										a(href="").media-link.media-artist Sobol
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Причины
+										a(href="").media-link.media-artist Ольга Серябкина
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Апрель
+										a(href="").media-link.media-artist Митя Фомин
+
+						a(href="").media-view-more
+							| Смотреть всё
+							svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
+								path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 					.wrapper-elem.wrapper-album
 						.wrapper-heading
@@ -725,46 +730,52 @@
 									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Романы. Часть 2
-									a(href="").media-link.media-artist Филипп Киркоров
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Парабола
-									a(href="").media-link.media-artist Мот
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Самоизоляция 
-									a(href="").media-link.media-artist Sobol
+							.media-elem-wrap
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Причины
+										a(href="").media-link.media-artist Ольга Серябкина
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Апрель
+										a(href="").media-link.media-artist Митя Фомин
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Романы. Часть 2
+										a(href="").media-link.media-artist Филипп Киркоров
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Парабола
+										a(href="").media-link.media-artist Мот
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Самоизоляция 
+										a(href="").media-link.media-artist Sobol
+
+						a(href="").media-view-more
+							| Смотреть всё
+							svg( width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg").wrapper-heading-icon
+								path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 					.wrapper-elem.wrapper-comment
 						.wrapper-heading
@@ -811,3 +822,4 @@
 				
 			include ../var/sidebar.pug
 		
+		include ../var/footer-mob.pug

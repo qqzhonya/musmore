@@ -31,6 +31,14 @@
 								.track-control-item.track-share
 									svg(width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 										path(d="M13 7.95122V16H1V7.95122M7 10.6951V1.18292M4 4.10437L6.99481 1L9.81314 4.10437" stroke="#808080" stroke-width="1.5" stroke-linejoin="round")
+									.track-share-dropdown-wrap
+										ul.track-share-dropdown
+											a(href="#").track-share-dropdown-social.vk-link
+											a(href="#").track-share-dropdown-social.tw-link
+											a(href="#").track-share-dropdown-social.fb-link
+											a(href="#").track-share-dropdown-social.od-link
+											a(href="#").track-share-dropdown-copy
+												| Скопировать ссылку
 								.track-control-item.track-download
 									svg(width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg").track-control-icon
 										path(d="M12.736 7.65582L8.29589 11.8317C8.17905 11.9477 7.94536 11.9477 7.82852 11.8317L3.27161 7.65582" stroke="#808080" stroke-width="1.5" stroke-miterlimit="10" stroke-linejoin="round")
@@ -350,62 +358,63 @@
 							.wrapper-heading-title Популярные альбомы
 
 						.media-wrapper
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Романы. Часть 2
-									a(href="").media-link.media-artist Филипп Киркоров
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Парабола
-									a(href="").media-link.media-artist Мот
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Самоизоляция 
-									a(href="").media-link.media-artist Sobol
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Причины
-									a(href="").media-link.media-artist Ольга Серябкина
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Апрель
-									a(href="").media-link.media-artist Митя Фомин
+							.media-elem-wrap
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Причины
+										a(href="").media-link.media-artist Ольга Серябкина
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Апрель
+										a(href="").media-link.media-artist Митя Фомин
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-3.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Романы. Часть 2
+										a(href="").media-link.media-artist Филипп Киркоров
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-4.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Парабола
+										a(href="").media-link.media-artist Мот
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-5.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Самоизоляция 
+										a(href="").media-link.media-artist Sobol
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Причины
+										a(href="").media-link.media-artist Ольга Серябкина
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Апрель
+										a(href="").media-link.media-artist Митя Фомин
 
 					.wrapper-elem.wrapper-artist
 						.wrapper-heading 
@@ -416,88 +425,90 @@
 									path(d="M1 11L5 5.85577L1 1" stroke="#151515" stroke-width="1.5" stroke-miterlimit="10")
 
 						.media-wrapper.artist
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name kavabanga Depo kolibri
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Johnyboy
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Noize MC
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Нервы
-									a(href="").media-link.media-artist украинский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Макс Корж 
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name kavabanga Depo kolibri
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-2.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Johnyboy
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-3.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Noize MC
-									a(href="").media-link.media-artist русский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-4.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Нервы
-									a(href="").media-link.media-artist украинский реп
-							.media-elem
-								.media-img-box
-									img(src="style/img/artist/popularartist-cover-5.jpg", alt="").media-img
-									.media-play
-										.media-play-btn
-								.media-info
-									a(href="").media-link.media-name Макс Корж 
-									a(href="").media-link.media-artist русский реп
+							.media-elem-wrap
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name kavabanga Depo kolibri
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Johnyboy
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-3.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Noize MC
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-4.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Нервы
+										a(href="").media-link.media-artist украинский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-5.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Макс Корж 
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/album/popularalbum-cover-1.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name kavabanga Depo kolibri
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-2.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Johnyboy
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-3.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Noize MC
+										a(href="").media-link.media-artist русский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-4.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Нервы
+										a(href="").media-link.media-artist украинский реп
+								.media-elem
+									.media-img-box
+										img(src="style/img/artist/popularartist-cover-5.jpg", alt="").media-img
+										.media-play
+											.media-play-btn
+									.media-info
+										a(href="").media-link.media-name Макс Корж 
+										a(href="").media-link.media-artist русский реп
 
 				include ../var/footer.pug
 				
 			include ../var/sidebar.pug
 		
+		include ../var/footer-mob.pug

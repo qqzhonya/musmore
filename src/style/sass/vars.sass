@@ -102,7 +102,8 @@ a
 			bottom: 55px
 
 		&:last-child
-			margin: 0
+			margin: 
+				bottom: 0
 
 	&-song
 		.track
@@ -125,8 +126,12 @@ a
 		&-link
 			+flex 
 			position: relative
+			margin:
+				left: 10px
+				right: 15px
 			font-size: 16px
 			color: $font-dark-color
+			white-space: nowrap
 			+align-items(center)
 			+prefix(transition, $default-transition)
 
@@ -217,26 +222,6 @@ a
 	&:last-child
 		margin:
 			bottom: 0
-
-	&:hover
-		border-color: $accent-color
-		
-		.track-play
-			opacity: 1
-			visibility: visible	
-		
-		.track-share,
-		.track-download
-			display: block
-		
-		.track-like
-			+flex
-
-		.track__time
-			display: none
-
-		.track-number
-			opacity: 0
 	
 	&-img-box
 		position: relative
@@ -417,10 +402,12 @@ a
 		+align-items(center)
 
 		&-slider
+			display: block !important
 			width: 88px
 			height: 3px
 			background-color: #C4C4C4
 			cursor: pointer
+			visibility: visible !important
 
 			.ui-slider-range
 				background-color: $accent-color
@@ -442,10 +429,6 @@ a
 
 	&-share
 		position: relative
-
-		&:hover
-			.track-share-dropdown-wrap
-				display: block
 		
 		&-dropdown-wrap
 			display: none
@@ -454,8 +437,11 @@ a
 				top: 60px
 			top: 0
 			left: 50%
-			+prefix(transform, translateX(-51.5%))
+			+prefix(transform, translateX(-50%))
 			z-index: 20
+
+			&.active
+				display: block
 
 		&-dropdown
 			+flex
@@ -472,6 +458,8 @@ a
 				content: ''
 				display: block
 				position: absolute
+				margin:
+					left: -6px
 				top: -7px
 				left: 50%
 				width: 12px 
@@ -479,7 +467,6 @@ a
 				background-color: $white-color
 				border-top: $border-param
 				border-left: $border-param
-				+prefix(transform, translateX(-50%))
 				+prefix(transform, rotate(45deg))
 
 			&-social
@@ -662,6 +649,8 @@ a
 
 .media
 	&-wrapper
+		
+	&-elem-wrap
 		+flex
 		margin: 0 -7px
 		+flex-wrap(wrap)
@@ -672,10 +661,8 @@ a
 		display: block
 		position: relative
 		margin-bottom: 20px
-		margin-right: 11px
+		padding: 0 7px
 		width: 20%
-		min-width: 158px
-		max-width: 158px
 		cursor: pointer
 
 		&:last-child
@@ -699,8 +686,7 @@ a
 	&-img-box
 		position: relative
 		width: 100%
-		max-width: 158px
-		height: 158px
+		padding-bottom: 100%
 		border-radius: 5px
 		overflow: hidden
 		+prefix(transition, $default-transition)
@@ -794,6 +780,24 @@ a
 		line-height: 14px
 		color: $font-light-color
 
+	&-view-more
+		display: none
+		position: relative
+		font-size: 16px
+		color: $font-dark-color
+		+justify-content(center)
+		+align-items(center)
+		+prefix(transition, $default-transition)
+
+		&:hover
+			color: $accent-color
+			.wrapper-heading-icon
+				margin:
+					left: 13px
+				
+				path
+					stroke: $accent-color
+
 .media-wrapper.artist
 	.media
 		&-img-box
@@ -834,12 +838,13 @@ a
 
 .header-info 
 	+flex
+	+align-items(flex-start)
 
 	&-img-box
 		position: relative
-		width: 100%
-		max-width: 200px
-		height: 200px
+		width: 24.4%
+		padding:
+			bottom: 24.4%
 		border-radius: 5px
 		overflow: hidden
 		background-image: url(../img/icon/person-icon.svg)
@@ -881,8 +886,9 @@ a
 	&-wrap
 		margin:
 			left: 28px
-		width: 100%
-
+		width: 75.6%
+	
+	h1,
 	&-name
 		font-size: 35px
 		font-weight: 700
@@ -918,11 +924,17 @@ a
 		+flex-wrap(wrap)
 
 		&-elem
+			margin:
+				right: 10px
 			width: 50%
 			max-width: 216px
 			font-size: 14px
 			line-height: 28px
 			font-weight: 500
+
+			&:nth-child(even)
+				margin:
+					right: 0
 
 		&-name 
 			color: $font-light-color
@@ -933,7 +945,6 @@ a
 		
 		&-link
 			color: $font-dark-color
-			
 
 			&::after
 				content: ','
@@ -1236,7 +1247,7 @@ a
 
 	.second-tab
 		border: 0
-		padding: 0
+		padding: 0 30px
 
 		.second-tab-elem
 			color: rgba(255, 255, 255, .8)
@@ -1444,6 +1455,10 @@ a
 		+prefix(transition, $default-transition)
 		overflow: hidden
 
+		&.registration-btn
+			padding: 16px 27px
+			min-width: 213px
+
 		span
 			position: relative
 			z-index: 2
@@ -1524,6 +1539,9 @@ a
 		border-radius: 8px
 		+prefix(transition, $default-transition)
 		cursor: pointer
+
+		&:last-child
+			margin: 0
 
 		svg
 			position: relative
