@@ -239,12 +239,11 @@
 			display: none
 			position: absolute
 			padding: 15px
-			top: -90px
-			left: -50px
-			width: 120px
-			height: 35px
+			bottom: 33px
+			right: -10px
+			width: 35px
+			height: 120px
 			background-color: $white-color
-			+prefix(transform, rotate(-90deg))
 			border: $border-param
 			border-radius: 5px
 			+box-shadow(0px 6px 20px rgba(0, 0, 0, 0.1))
@@ -257,16 +256,23 @@
 				display: block
 				position: absolute
 				margin:
-					left: -5px
-					bottom: -4px
-				bottom: 50%
-				left: 0
+					bottom: -5px
+					left: -4px
+				bottom: 0
+				left: 50%
 				width: 8px
 				height: 8px
 				background-color: $white-color
 				border-top: $border-param
 				border-left: $border-param
-				+prefix(transform, rotate(-45deg))
+				+prefix(transform, rotate(-135deg))
+
+		&-slider
+			width: 3px
+			height: 88px
+
+			.ui-slider-handle
+				top: auto
 
 	.track-share-dropdown
 		padding: 15px

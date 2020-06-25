@@ -126,6 +126,18 @@ $(function() {
 	//
 
 	//
+	// stopPropagation for control button on track
+	//
+
+	$('.track-control-item').click(function(e) {
+		e.stopPropagation();
+	})
+
+	//
+	// stopPropagation for control button on track end 
+	// 
+
+	//
 	// Show/hide username input
 	//
 
@@ -143,7 +155,7 @@ $(function() {
 	// Show/hide username input end
 	//
 
-
+	
 	//
 	// Show/close ganres
 	//
@@ -407,7 +419,6 @@ $(function() {
 			$('.track-volume-wrapper').toggleClass('active');
 		})
 	}
-	
 
 	$('.mustoggler').on('click', function (e) {
 		e.stopPropagation();

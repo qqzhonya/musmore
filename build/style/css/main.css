@@ -3099,16 +3099,11 @@ a {
       display: none;
       position: absolute;
       padding: 15px;
-      top: -90px;
-      left: -50px;
-      width: 120px;
-      height: 35px;
+      bottom: 33px;
+      right: -10px;
+      width: 35px;
+      height: 120px;
       background-color: #ffffff;
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      transform: rotate(-90deg);
       border: 1px solid #E5E5E5;
       border-radius: 5px;
       -webkit-box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
@@ -3122,20 +3117,25 @@ a {
         content: '';
         display: block;
         position: absolute;
-        margin-left: -5px;
-        margin-bottom: -4px;
-        bottom: 50%;
-        left: 0;
+        margin-bottom: -5px;
+        margin-left: -4px;
+        bottom: 0;
+        left: 50%;
         width: 8px;
         height: 8px;
         background-color: #ffffff;
         border-top: 1px solid #E5E5E5;
         border-left: 1px solid #E5E5E5;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg); }
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg); }
+    .track-volume-slider {
+      width: 3px;
+      height: 88px; }
+      .track-volume-slider .ui-slider-handle {
+        top: auto; }
   .track-share-dropdown {
     padding: 15px;
     width: auto;
